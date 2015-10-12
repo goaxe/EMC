@@ -1,0 +1,28 @@
+UnStarted Id: 
+line: 4141 [Sat Oct 10 17:00:38 UTC 2015] execution id=2147 finished: Session ID: 561944361da3a, , , , , <b>Warning</b>: mysqli::mysqli(): (HY000/1040): Too many connections in <b>/app/index.php</b> on line <b>65</b> <b>Warning</b>: mysqli::query(): Couldn't fetch mysqli in <b>/app/index.php</b> on line <b>121</b>, <b>Fatal error</b>: Call to a member function fetch_assoc() on a non-object in <b>/app/index.php</b> on line <b>122</b>
+
+line: 9745 [Sat Oct 10 18:03:48 UTC 2015] execution id=4952 finished: Session ID: 56195304dd545, , , , , <b>Warning</b>: mysqli::mysqli(): (HY000/1040): Too many connections in <b>/app/index.php</b> on line <b>65</b> <b>Warning</b>: mysqli::query(): Couldn't fetch mysqli in <b>/app/index.php</b> on line <b>121</b>, <b>Fatal error</b>: Call to a member function fetch_assoc() on a non-object in <b>/app/index.php</b> on line <b>122</b>
+
+UnknowFinishStatus: 
+line: 956 [Sat Oct 10 16:17:38 UTC 2015] execution id=98 finished: Session ID: 561937f6b3bf4, TIME_ELAPSED (sec): 555.39859294891 , Redis cache hits: 10, DB update error count: 3, DB append error count: 0, bool(true) 1117 SuWnx4FLfDNqsEyTqd7rysAQwCuoRiKJNF6kKM4 pSpRwXJWaRnIjYyPz1dqkX86,
+
+line: 1228 [Sat Oct 10 16:21:44 UTC 2015] execution id=324 finished: Session ID: 561938ecbc687, TIME_ELAPSED (sec): 555.22375106812 , Redis cache hits: 10, DB update error count: 0, DB append error count: 0, 1117 SuWnx4FLfDNqsEyTqd7rysAQwCuoRiKJNF6kKM4 pSpRwXJWaRnIjYyPz1dqkX86,
+
+line: 19582 [Sat Oct 10 20:00:52 UTC 2015] execution id=9242 finished: Session ID: 56196c44c36cd, TIME_ELAPSED (sec): 559.29529500008 , Redis cache hits: 4, DB update error count: 0, DB append error count: 0, bool(true) 2230 7kvEIux6XRyzjHCSq1Pqcl0vld5ArvhyQMcxfKEcBbLUTnMioAIAWJ5gWaRnF7Wv,
+
+line: 22045 [Sat Oct 10 20:28:39 UTC 2015] execution id=10907 finished: Session ID: 561972e30babf, TIME_ELAPSED (sec): 532.71226191521 , Redis cache hits: 1, DB update error count: 0, DB append error count: 0, 2230 7kvEIux6XRyzjHCSq1Pqcl0vld5ArvhyQMcxfKEcBbLUTnMioAIAWJ5gWaRnF7Wv,
+
+line: 32019 [Sat Oct 10 22:22:05 UTC 2015] execution id=15728 finished: Session ID: 56198d55bf0a0, TIME_ELAPSED (sec): 567.93936705589 , Redis cache hits: 6, DB update error count: 0, DB append error count: 0, bool(true) 4042 dhTka8bRyFB2sw9tfCGEotdRnhSKJkbWC3fMcrDL6dNzJW1ZyHDWaRNy8FhR tNC,
+
+line: 32262 [Sat Oct 10 22:28:14 UTC 2015] execution id=16014 finished: Session ID: 56198ef4e9999, TIME_ELAPSED (sec): 521.65936517715 , Redis cache hits: 1, DB update error count: 0, DB append error count: 0, bool(true) 19162 CjeVgnbsYzDQKS6HPWaRNlXHyTmLIE2jYheeEpHBZkrIbxp0tARfVNXsFidnXfGU,
+
+line: 32381 [Sat Oct 10 22:31:34 UTC 2015] execution id=16124 finished: Session ID: 56198fdd842e6, TIME_ELAPSED (sec): 488.70019388199 , Redis cache hits: 1, DB update error count: 0, DB append error count: 0, 4042 dhTka8bRyFB2sw9tfCGEotdRnhSKJkbWC3fMcrDL6dNzJW1ZyHDWaRNy8FhR tNC,
+
+line: 32566 [Sat Oct 10 22:36:32 UTC 2015] execution id=16257 finished: Session ID: 561991e5506b9, TIME_ELAPSED (sec): 267.21047782898 , Redis cache hits: 2, DB update error count: 0, DB append error count: 0, 19162 CjeVgnbsYzDQKS6HPWaRNlXHyTmLIE2jYheeEpHBZkrIbxp0tARfVNXsFidnXfGU,
+
+line: 32954 [Sat Oct 10 22:44:16 UTC 2015] execution id=16335 finished: Session ID: 561992ffdd1ff, TIME_ELAPSED (sec): 448.65456104279 , Redis cache hits: 0, DB update error count: 0, DB append error count: 0, 4042 dhTka8bRyFB2sw9tfCGEotdRnhSKJkbWC3fMcrDL6dNzJW1ZyHDWaRNy8FhR tNC,
+
+line: 33540 [Sat Oct 10 22:50:32 UTC 2015] execution id=16441 finished: Session ID: 561993f2468f6, TIME_ELAPSED (sec): 582.02075004578 , Redis cache hits: 2, DB update error count: 0, DB append error count: 0, 19162 CjeVgnbsYzDQKS6HPWaRNlXHyTmLIE2jYheeEpHBZkrIbxp0tARfVNXsFidnXfGU,
+
+line: 35198 [Sat Oct 10 23:02:46 UTC 2015] execution id=17040 finished: Session ID: 561996f483308, TIME_ELAPSED (sec): 545.85788583755 , Redis cache hits: 2, DB update error count: 0, DB append error count: 0, 4042 dhTka8bRyFB2sw9tfCGEotdRnhSKJkbWC3fMcrDL6dNzJW1ZyHDWaRNy8FhR tNC,
+
