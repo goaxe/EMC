@@ -1,0 +1,469 @@
+1:C 10 Oct 14:33:56.209 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.0.4 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 1
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+1:M 10 Oct 14:33:56.211 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 10 Oct 14:33:56.211 # Server started, Redis version 3.0.4
+1:M 10 Oct 14:33:56.211 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 10 Oct 14:33:56.211 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 10 Oct 14:33:56.211 * The server is now ready to accept connections on port 6379
+1:M 10 Oct 15:33:57.052 * 1 changes in 3600 seconds. Saving...
+1:M 10 Oct 15:33:57.056 * Background saving started by pid 9
+9:C 10 Oct 15:33:57.136 * DB saved on disk
+9:C 10 Oct 15:33:57.137 * RDB: 6 MB of memory used by copy-on-write
+1:M 10 Oct 15:33:57.157 * Background saving terminated with success
+1:M 10 Oct 16:03:20.720 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:03:20.722 * Background saving started by pid 20
+20:C 10 Oct 16:03:20.799 * DB saved on disk
+20:C 10 Oct 16:03:20.800 * RDB: 6 MB of memory used by copy-on-write
+1:M 10 Oct 16:03:20.822 * Background saving terminated with success
+1:M 10 Oct 16:08:21.005 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:08:21.007 * Background saving started by pid 21
+21:C 10 Oct 16:08:21.131 * DB saved on disk
+21:C 10 Oct 16:08:21.131 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:08:21.208 * Background saving terminated with success
+1:M 10 Oct 16:13:22.035 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:13:22.038 * Background saving started by pid 22
+22:C 10 Oct 16:13:22.108 * DB saved on disk
+22:C 10 Oct 16:13:22.109 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:13:22.138 * Background saving terminated with success
+1:M 10 Oct 16:18:23.073 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:18:23.078 * Background saving started by pid 23
+23:C 10 Oct 16:18:23.122 * DB saved on disk
+23:C 10 Oct 16:18:23.123 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:18:23.179 * Background saving terminated with success
+1:M 10 Oct 16:23:24.016 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:23:24.018 * Background saving started by pid 24
+24:C 10 Oct 16:23:24.149 * DB saved on disk
+24:C 10 Oct 16:23:24.149 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:23:24.218 * Background saving terminated with success
+1:M 10 Oct 16:28:25.034 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:28:25.042 * Background saving started by pid 25
+25:C 10 Oct 16:28:25.098 * DB saved on disk
+25:C 10 Oct 16:28:25.099 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:28:25.142 * Background saving terminated with success
+1:M 10 Oct 16:33:26.091 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:33:26.093 * Background saving started by pid 26
+26:C 10 Oct 16:33:26.252 * DB saved on disk
+26:C 10 Oct 16:33:26.253 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:33:26.294 * Background saving terminated with success
+1:M 10 Oct 16:38:27.056 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:38:27.058 * Background saving started by pid 27
+27:C 10 Oct 16:38:27.089 * DB saved on disk
+27:C 10 Oct 16:38:27.090 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:38:27.159 * Background saving terminated with success
+1:M 10 Oct 16:43:28.068 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:43:28.070 * Background saving started by pid 28
+28:C 10 Oct 16:43:28.184 * DB saved on disk
+28:C 10 Oct 16:43:28.185 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:43:28.271 * Background saving terminated with success
+1:M 10 Oct 16:48:29.014 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:48:29.016 * Background saving started by pid 29
+29:C 10 Oct 16:48:29.055 * DB saved on disk
+29:C 10 Oct 16:48:29.056 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:48:29.117 * Background saving terminated with success
+1:M 10 Oct 16:53:30.079 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:53:30.081 * Background saving started by pid 30
+30:C 10 Oct 16:53:30.189 * DB saved on disk
+30:C 10 Oct 16:53:30.190 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:53:30.281 * Background saving terminated with success
+1:M 10 Oct 16:58:31.096 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 16:58:31.098 * Background saving started by pid 31
+31:C 10 Oct 16:58:31.171 * DB saved on disk
+31:C 10 Oct 16:58:31.172 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 16:58:31.198 * Background saving terminated with success
+1:M 10 Oct 17:03:32.050 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:03:32.051 * Background saving started by pid 32
+32:C 10 Oct 17:03:32.128 * DB saved on disk
+32:C 10 Oct 17:03:32.129 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:03:32.151 * Background saving terminated with success
+1:M 10 Oct 17:08:33.098 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:08:33.099 * Background saving started by pid 33
+33:C 10 Oct 17:08:33.175 * DB saved on disk
+33:C 10 Oct 17:08:33.175 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:08:33.200 * Background saving terminated with success
+1:M 10 Oct 17:13:34.035 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:13:34.036 * Background saving started by pid 34
+34:C 10 Oct 17:13:34.140 * DB saved on disk
+34:C 10 Oct 17:13:34.141 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:13:34.236 * Background saving terminated with success
+1:M 10 Oct 17:18:35.043 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:18:35.046 * Background saving started by pid 35
+35:C 10 Oct 17:18:35.074 * DB saved on disk
+35:C 10 Oct 17:18:35.075 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:18:35.146 * Background saving terminated with success
+1:M 10 Oct 17:23:36.065 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:23:36.067 * Background saving started by pid 36
+36:C 10 Oct 17:23:36.168 * DB saved on disk
+36:C 10 Oct 17:23:36.169 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:23:36.268 * Background saving terminated with success
+1:M 10 Oct 17:28:37.000 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:28:37.003 * Background saving started by pid 37
+37:C 10 Oct 17:28:37.177 * DB saved on disk
+37:C 10 Oct 17:28:37.178 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:28:37.203 * Background saving terminated with success
+1:M 10 Oct 17:33:38.047 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:33:38.048 * Background saving started by pid 38
+38:C 10 Oct 17:33:38.113 * DB saved on disk
+38:C 10 Oct 17:33:38.114 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:33:38.149 * Background saving terminated with success
+1:M 10 Oct 17:38:39.076 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:38:39.083 * Background saving started by pid 39
+39:C 10 Oct 17:38:39.135 * DB saved on disk
+39:C 10 Oct 17:38:39.135 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:38:39.183 * Background saving terminated with success
+1:M 10 Oct 17:43:40.055 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:43:40.059 * Background saving started by pid 40
+40:C 10 Oct 17:43:40.146 * DB saved on disk
+40:C 10 Oct 17:43:40.147 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:43:40.160 * Background saving terminated with success
+1:M 10 Oct 17:48:41.007 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:48:41.009 * Background saving started by pid 41
+41:C 10 Oct 17:48:41.080 * DB saved on disk
+41:C 10 Oct 17:48:41.080 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:48:41.109 * Background saving terminated with success
+1:M 10 Oct 17:53:42.073 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:53:42.075 * Background saving started by pid 42
+42:C 10 Oct 17:53:42.506 * DB saved on disk
+42:C 10 Oct 17:53:42.507 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:53:42.576 * Background saving terminated with success
+1:M 10 Oct 17:58:43.027 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 17:58:43.028 * Background saving started by pid 43
+43:C 10 Oct 17:58:43.154 * DB saved on disk
+43:C 10 Oct 17:58:43.154 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 17:58:43.229 * Background saving terminated with success
+1:M 10 Oct 18:03:44.003 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:03:44.007 * Background saving started by pid 44
+44:C 10 Oct 18:03:44.093 * DB saved on disk
+44:C 10 Oct 18:03:44.094 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:03:44.107 * Background saving terminated with success
+1:M 10 Oct 18:08:45.058 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:08:45.060 * Background saving started by pid 45
+45:C 10 Oct 18:08:45.147 * DB saved on disk
+45:C 10 Oct 18:08:45.147 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:08:45.160 * Background saving terminated with success
+1:M 10 Oct 18:13:46.029 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:13:46.031 * Background saving started by pid 46
+46:C 10 Oct 18:13:46.119 * DB saved on disk
+46:C 10 Oct 18:13:46.119 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:13:46.131 * Background saving terminated with success
+1:M 10 Oct 18:18:47.070 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:18:47.076 * Background saving started by pid 47
+47:C 10 Oct 18:18:47.121 * DB saved on disk
+47:C 10 Oct 18:18:47.122 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:18:47.176 * Background saving terminated with success
+1:M 10 Oct 18:23:48.050 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:23:48.051 * Background saving started by pid 48
+48:C 10 Oct 18:23:48.179 * DB saved on disk
+48:C 10 Oct 18:23:48.180 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:23:48.253 * Background saving terminated with success
+1:M 10 Oct 18:28:49.090 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:28:49.091 * Background saving started by pid 49
+49:C 10 Oct 18:28:49.251 * DB saved on disk
+49:C 10 Oct 18:28:49.252 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:28:49.292 * Background saving terminated with success
+1:M 10 Oct 18:33:50.010 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:33:50.011 * Background saving started by pid 50
+50:C 10 Oct 18:33:50.095 * DB saved on disk
+50:C 10 Oct 18:33:50.095 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:33:50.112 * Background saving terminated with success
+1:M 10 Oct 18:38:51.038 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:38:51.043 * Background saving started by pid 51
+51:C 10 Oct 18:38:51.090 * DB saved on disk
+51:C 10 Oct 18:38:51.091 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:38:51.143 * Background saving terminated with success
+1:M 10 Oct 18:43:52.079 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:43:52.081 * Background saving started by pid 52
+52:C 10 Oct 18:43:52.129 * DB saved on disk
+52:C 10 Oct 18:43:52.130 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:43:52.181 * Background saving terminated with success
+1:M 10 Oct 18:48:53.021 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:48:53.023 * Background saving started by pid 53
+53:C 10 Oct 18:48:53.235 * DB saved on disk
+53:C 10 Oct 18:48:53.236 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:48:53.324 * Background saving terminated with success
+1:M 10 Oct 18:53:54.088 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:53:54.090 * Background saving started by pid 54
+54:C 10 Oct 18:53:54.204 * DB saved on disk
+54:C 10 Oct 18:53:54.205 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:53:54.292 * Background saving terminated with success
+1:M 10 Oct 18:58:55.034 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 18:58:55.038 * Background saving started by pid 55
+55:C 10 Oct 18:58:55.098 * DB saved on disk
+55:C 10 Oct 18:58:55.099 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 18:58:55.139 * Background saving terminated with success
+1:M 10 Oct 19:03:56.020 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:03:56.022 * Background saving started by pid 56
+56:C 10 Oct 19:03:56.079 * DB saved on disk
+56:C 10 Oct 19:03:56.079 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:03:56.122 * Background saving terminated with success
+1:M 10 Oct 19:08:57.072 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:08:57.074 * Background saving started by pid 57
+57:C 10 Oct 19:08:57.172 * DB saved on disk
+57:C 10 Oct 19:08:57.173 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:08:57.174 * Background saving terminated with success
+1:M 10 Oct 19:13:58.073 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:13:58.075 * Background saving started by pid 58
+58:C 10 Oct 19:13:58.129 * DB saved on disk
+58:C 10 Oct 19:13:58.129 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:13:58.175 * Background saving terminated with success
+1:M 10 Oct 19:18:59.036 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:18:59.037 * Background saving started by pid 59
+59:C 10 Oct 19:18:59.100 * DB saved on disk
+59:C 10 Oct 19:18:59.101 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:18:59.138 * Background saving terminated with success
+1:M 10 Oct 19:24:00.087 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:24:00.089 * Background saving started by pid 60
+60:C 10 Oct 19:24:00.186 * DB saved on disk
+60:C 10 Oct 19:24:00.187 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:24:00.189 * Background saving terminated with success
+1:M 10 Oct 19:29:01.038 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:29:01.040 * Background saving started by pid 61
+61:C 10 Oct 19:29:01.168 * DB saved on disk
+61:C 10 Oct 19:29:01.169 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:29:01.241 * Background saving terminated with success
+1:M 10 Oct 19:34:02.083 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:34:02.084 * Background saving started by pid 62
+62:C 10 Oct 19:34:02.124 * DB saved on disk
+62:C 10 Oct 19:34:02.124 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:34:02.184 * Background saving terminated with success
+1:M 10 Oct 19:39:03.010 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:39:03.012 * Background saving started by pid 63
+63:C 10 Oct 19:39:03.068 * DB saved on disk
+63:C 10 Oct 19:39:03.068 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:39:03.112 * Background saving terminated with success
+1:M 10 Oct 19:44:04.061 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:44:04.062 * Background saving started by pid 64
+64:C 10 Oct 19:44:04.156 * DB saved on disk
+64:C 10 Oct 19:44:04.156 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:44:04.162 * Background saving terminated with success
+1:M 10 Oct 19:49:05.025 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:49:05.026 * Background saving started by pid 65
+65:C 10 Oct 19:49:05.136 * DB saved on disk
+65:C 10 Oct 19:49:05.137 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:49:05.228 * Background saving terminated with success
+1:M 10 Oct 19:54:06.048 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:54:06.050 * Background saving started by pid 66
+66:C 10 Oct 19:54:06.288 * DB saved on disk
+66:C 10 Oct 19:54:06.289 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:54:06.351 * Background saving terminated with success
+1:M 10 Oct 19:59:07.083 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 19:59:07.085 * Background saving started by pid 67
+67:C 10 Oct 19:59:07.159 * DB saved on disk
+67:C 10 Oct 19:59:07.160 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 19:59:07.186 * Background saving terminated with success
+1:M 10 Oct 20:04:08.009 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:04:08.011 * Background saving started by pid 68
+68:C 10 Oct 20:04:08.103 * DB saved on disk
+68:C 10 Oct 20:04:08.104 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:04:08.111 * Background saving terminated with success
+1:M 10 Oct 20:09:09.077 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:09:09.078 * Background saving started by pid 69
+69:C 10 Oct 20:09:09.210 * DB saved on disk
+69:C 10 Oct 20:09:09.210 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:09:09.279 * Background saving terminated with success
+1:M 10 Oct 20:14:10.044 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:14:10.046 * Background saving started by pid 70
+70:C 10 Oct 20:14:10.114 * DB saved on disk
+70:C 10 Oct 20:14:10.115 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:14:10.146 * Background saving terminated with success
+1:M 10 Oct 20:19:11.014 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:19:11.017 * Background saving started by pid 71
+71:C 10 Oct 20:19:11.226 * DB saved on disk
+71:C 10 Oct 20:19:11.227 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:19:11.318 * Background saving terminated with success
+1:M 10 Oct 20:24:12.099 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:24:12.101 * Background saving started by pid 72
+72:C 10 Oct 20:24:12.198 * DB saved on disk
+72:C 10 Oct 20:24:12.199 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:24:12.201 * Background saving terminated with success
+1:M 10 Oct 20:29:13.043 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:29:13.045 * Background saving started by pid 73
+73:C 10 Oct 20:29:13.149 * DB saved on disk
+73:C 10 Oct 20:29:13.149 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:29:13.246 * Background saving terminated with success
+1:M 10 Oct 20:34:14.008 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:34:14.010 * Background saving started by pid 74
+74:C 10 Oct 20:34:14.083 * DB saved on disk
+74:C 10 Oct 20:34:14.083 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:34:14.110 * Background saving terminated with success
+1:M 10 Oct 20:39:15.055 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:39:15.056 * Background saving started by pid 75
+75:C 10 Oct 20:39:15.284 * DB saved on disk
+75:C 10 Oct 20:39:15.284 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:39:15.358 * Background saving terminated with success
+1:M 10 Oct 20:44:16.007 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:44:16.011 * Background saving started by pid 76
+76:C 10 Oct 20:44:16.175 * DB saved on disk
+76:C 10 Oct 20:44:16.176 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:44:16.212 * Background saving terminated with success
+1:M 10 Oct 20:49:17.083 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:49:17.085 * Background saving started by pid 77
+77:C 10 Oct 20:49:17.202 * DB saved on disk
+77:C 10 Oct 20:49:17.202 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:49:17.286 * Background saving terminated with success
+1:M 10 Oct 20:54:18.072 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:54:18.075 * Background saving started by pid 78
+78:C 10 Oct 20:54:18.259 * DB saved on disk
+78:C 10 Oct 20:54:18.260 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:54:18.276 * Background saving terminated with success
+1:M 10 Oct 20:59:19.019 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 20:59:19.023 * Background saving started by pid 79
+79:C 10 Oct 20:59:19.119 * DB saved on disk
+79:C 10 Oct 20:59:19.120 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 20:59:19.123 * Background saving terminated with success
+1:M 10 Oct 21:04:20.085 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:04:20.088 * Background saving started by pid 80
+80:C 10 Oct 21:04:20.143 * DB saved on disk
+80:C 10 Oct 21:04:20.144 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 21:04:20.188 * Background saving terminated with success
+1:M 10 Oct 21:09:21.049 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:09:21.060 * Background saving started by pid 81
+81:C 10 Oct 21:09:21.239 * DB saved on disk
+81:C 10 Oct 21:09:21.239 * RDB: 4 MB of memory used by copy-on-write
+1:M 10 Oct 21:09:21.260 * Background saving terminated with success
+1:M 10 Oct 21:14:22.100 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:14:22.101 * Background saving started by pid 82
+82:C 10 Oct 21:14:22.168 * DB saved on disk
+82:C 10 Oct 21:14:22.168 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:14:22.201 * Background saving terminated with success
+1:M 10 Oct 21:19:23.018 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:19:23.019 * Background saving started by pid 83
+83:C 10 Oct 21:19:23.108 * DB saved on disk
+83:C 10 Oct 21:19:23.109 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:19:23.119 * Background saving terminated with success
+1:M 10 Oct 21:24:24.066 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:24:24.066 * Background saving started by pid 84
+84:C 10 Oct 21:24:24.110 * DB saved on disk
+84:C 10 Oct 21:24:24.111 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:24:24.167 * Background saving terminated with success
+1:M 10 Oct 21:29:25.013 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:29:25.014 * Background saving started by pid 85
+85:C 10 Oct 21:29:25.141 * DB saved on disk
+85:C 10 Oct 21:29:25.142 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:29:25.214 * Background saving terminated with success
+1:M 10 Oct 21:34:26.047 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:34:26.047 * Background saving started by pid 86
+86:C 10 Oct 21:34:26.116 * DB saved on disk
+86:C 10 Oct 21:34:26.116 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:34:26.148 * Background saving terminated with success
+1:M 10 Oct 21:39:27.022 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:39:27.023 * Background saving started by pid 87
+87:C 10 Oct 21:39:27.084 * DB saved on disk
+87:C 10 Oct 21:39:27.085 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:39:27.123 * Background saving terminated with success
+1:M 10 Oct 21:44:28.071 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:44:28.071 * Background saving started by pid 88
+88:C 10 Oct 21:44:28.158 * DB saved on disk
+88:C 10 Oct 21:44:28.158 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:44:28.172 * Background saving terminated with success
+1:M 10 Oct 21:49:29.007 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:49:29.007 * Background saving started by pid 89
+89:C 10 Oct 21:49:29.050 * DB saved on disk
+89:C 10 Oct 21:49:29.051 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:49:29.108 * Background saving terminated with success
+1:M 10 Oct 21:54:30.082 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:54:30.083 * Background saving started by pid 90
+90:C 10 Oct 21:54:30.152 * DB saved on disk
+90:C 10 Oct 21:54:30.153 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:54:30.183 * Background saving terminated with success
+1:M 10 Oct 21:59:31.032 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 21:59:31.033 * Background saving started by pid 91
+91:C 10 Oct 21:59:31.092 * DB saved on disk
+91:C 10 Oct 21:59:31.093 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 21:59:31.133 * Background saving terminated with success
+1:M 10 Oct 22:04:32.043 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:04:32.044 * Background saving started by pid 92
+92:C 10 Oct 22:04:32.164 * DB saved on disk
+92:C 10 Oct 22:04:32.165 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:04:32.245 * Background saving terminated with success
+1:M 10 Oct 22:09:33.050 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:09:33.051 * Background saving started by pid 93
+93:C 10 Oct 22:09:33.141 * DB saved on disk
+93:C 10 Oct 22:09:33.142 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:09:33.151 * Background saving terminated with success
+1:M 10 Oct 22:14:34.027 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:14:34.028 * Background saving started by pid 94
+94:C 10 Oct 22:14:34.090 * DB saved on disk
+94:C 10 Oct 22:14:34.091 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:14:34.128 * Background saving terminated with success
+1:M 10 Oct 22:19:35.003 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:19:35.003 * Background saving started by pid 95
+95:C 10 Oct 22:19:35.081 * DB saved on disk
+95:C 10 Oct 22:19:35.081 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:19:35.104 * Background saving terminated with success
+1:M 10 Oct 22:24:36.044 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:24:36.044 * Background saving started by pid 96
+96:C 10 Oct 22:24:36.174 * DB saved on disk
+96:C 10 Oct 22:24:36.175 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:24:36.245 * Background saving terminated with success
+1:M 10 Oct 22:29:37.092 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:29:37.092 * Background saving started by pid 97
+97:C 10 Oct 22:29:37.167 * DB saved on disk
+97:C 10 Oct 22:29:37.168 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:29:37.193 * Background saving terminated with success
+1:M 10 Oct 22:34:38.010 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:34:38.010 * Background saving started by pid 98
+98:C 10 Oct 22:34:38.043 * DB saved on disk
+98:C 10 Oct 22:34:38.043 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:34:38.111 * Background saving terminated with success
+1:M 10 Oct 22:39:39.020 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:39:39.021 * Background saving started by pid 99
+99:C 10 Oct 22:39:39.150 * DB saved on disk
+99:C 10 Oct 22:39:39.151 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:39:39.222 * Background saving terminated with success
+1:M 10 Oct 22:44:40.085 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:44:40.085 * Background saving started by pid 100
+100:C 10 Oct 22:44:40.233 * DB saved on disk
+100:C 10 Oct 22:44:40.233 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:44:40.286 * Background saving terminated with success
+1:M 10 Oct 22:49:41.049 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:49:41.050 * Background saving started by pid 101
+101:C 10 Oct 22:49:41.425 * DB saved on disk
+101:C 10 Oct 22:49:41.426 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:49:41.450 * Background saving terminated with success
+1:M 10 Oct 22:54:42.016 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:54:42.016 * Background saving started by pid 102
+102:C 10 Oct 22:54:42.117 * DB saved on disk
+102:C 10 Oct 22:54:42.118 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:54:42.217 * Background saving terminated with success
+1:M 10 Oct 22:59:43.033 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 22:59:43.034 * Background saving started by pid 103
+103:C 10 Oct 22:59:43.150 * DB saved on disk
+103:C 10 Oct 22:59:43.151 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 22:59:43.235 * Background saving terminated with success
+1:M 10 Oct 23:04:44.022 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 23:04:44.022 * Background saving started by pid 104
+104:C 10 Oct 23:04:44.136 * DB saved on disk
+104:C 10 Oct 23:04:44.137 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 23:04:44.223 * Background saving terminated with success
+1:M 10 Oct 23:09:45.095 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 23:09:45.095 * Background saving started by pid 105
+105:C 10 Oct 23:09:45.182 * DB saved on disk
+105:C 10 Oct 23:09:45.182 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 23:09:45.196 * Background saving terminated with success
+1:M 10 Oct 23:14:46.086 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 23:14:46.087 * Background saving started by pid 106
+106:C 10 Oct 23:14:46.185 * DB saved on disk
+106:C 10 Oct 23:14:46.186 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 23:14:46.287 * Background saving terminated with success
+1:M 10 Oct 23:19:47.069 * 100 changes in 300 seconds. Saving...
+1:M 10 Oct 23:19:47.070 * Background saving started by pid 107
+107:C 10 Oct 23:19:47.119 * DB saved on disk
+107:C 10 Oct 23:19:47.120 * RDB: 2 MB of memory used by copy-on-write
+1:M 10 Oct 23:19:47.170 * Background saving terminated with success

@@ -1,0 +1,772 @@
+Running mysql_install_db ...
+2015-10-10 14:30:59 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+2015-10-10 14:30:59 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-10-10 14:30:59 0 [Note] /usr/sbin/mysqld (mysqld 5.6.24-72.2-56) starting as process 16 ...
+2015-10-10 14:30:59 16 [Note] WSREP: Read nil XID from storage engines, skipping position init
+2015-10-10 14:30:59 16 [Note] WSREP: wsrep_load(): loading provider library 'none'
+2015-10-10 14:30:59 16 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-10-10 14:30:59 16 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-10-10 14:30:59 16 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-10-10 14:30:59 16 [Note] InnoDB: Memory barrier is not used
+2015-10-10 14:30:59 16 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2015-10-10 14:30:59 16 [Note] InnoDB: Using Linux native AIO
+2015-10-10 14:30:59 16 [Note] InnoDB: Using CPU crc32 instructions
+2015-10-10 14:30:59 16 [Note] InnoDB: Initializing buffer pool, size = 20.0M
+2015-10-10 14:30:59 16 [Note] InnoDB: Completed initialization of buffer pool
+2015-10-10 14:30:59 16 [Note] InnoDB: The first specified data file ./ibdata1 did not exist: a new database to be created!
+2015-10-10 14:30:59 16 [Note] InnoDB: Setting file ./ibdata1 size to 12 MB
+2015-10-10 14:30:59 16 [Note] InnoDB: Database physically writes the file full: wait...
+2015-10-10 14:31:00 16 [Note] InnoDB: Setting log file ./ib_logfile101 size to 100 MB
+InnoDB: Progress in MB: 100
+2015-10-10 14:31:02 16 [Note] InnoDB: Setting log file ./ib_logfile1 size to 100 MB
+InnoDB: Progress in MB: 100
+2015-10-10 14:31:26 16 [Note] InnoDB: Renaming log file ./ib_logfile101 to ./ib_logfile0
+2015-10-10 14:31:26 16 [Warning] InnoDB: New log files created, LSN=45781
+2015-10-10 14:31:26 16 [Note] InnoDB: Doublewrite buffer not found: creating new
+2015-10-10 14:31:26 16 [Note] InnoDB: Doublewrite buffer created
+2015-10-10 14:31:26 16 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-10-10 14:31:26 16 [Warning] InnoDB: Creating foreign key constraint system tables.
+2015-10-10 14:31:26 16 [Note] InnoDB: Foreign key constraint system tables created
+2015-10-10 14:31:26 16 [Note] InnoDB: Creating tablespace and datafile system tables.
+2015-10-10 14:31:27 16 [Note] InnoDB: Tablespace and datafile system tables created.
+2015-10-10 14:31:27 16 [Note] InnoDB: Waiting for purge to start
+2015-10-10 14:31:27 16 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.24-72.2 started; log sequence number 0
+2015-10-10 14:31:27 16 [Note] RSA private key file not found: /var/lib/mysql//private_key.pem. Some authentication plugins will not work.
+2015-10-10 14:31:27 16 [Note] RSA public key file not found: /var/lib/mysql//public_key.pem. Some authentication plugins will not work.
+2015-10-10 14:31:39 16 [Note] WSREP: Service disconnected.
+2015-10-10 14:31:40 16 [Note] WSREP: Some threads may fail to exit.
+2015-10-10 14:31:40 16 [Note] Binlog end
+2015-10-10 14:31:40 16 [Note] InnoDB: FTS optimize thread exiting.
+2015-10-10 14:31:40 16 [Note] InnoDB: Starting shutdown...
+2015-10-10 14:31:42 16 [Note] InnoDB: Shutdown completed; log sequence number 1625977
+Installing MySQL system tables...OK
+
+2015-10-10 14:31:42 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+2015-10-10 14:31:42 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-10-10 14:31:42 0 [Note] /usr/sbin/mysqld (mysqld 5.6.24-72.2-56) starting as process 41 ...
+2015-10-10 14:31:42 41 [Note] WSREP: Read nil XID from storage engines, skipping position init
+2015-10-10 14:31:42 41 [Note] WSREP: wsrep_load(): loading provider library 'none'
+2015-10-10 14:31:42 41 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-10-10 14:31:42 41 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-10-10 14:31:42 41 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-10-10 14:31:42 41 [Note] InnoDB: Memory barrier is not used
+2015-10-10 14:31:42 41 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2015-10-10 14:31:42 41 [Note] InnoDB: Using Linux native AIO
+2015-10-10 14:31:42 41 [Note] InnoDB: Using CPU crc32 instructions
+2015-10-10 14:31:42 41 [Note] InnoDB: Initializing buffer pool, size = 20.0M
+2015-10-10 14:31:42 41 [Note] InnoDB: Completed initialization of buffer pool
+2015-10-10 14:31:42 41 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-10-10 14:31:42 41 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-10-10 14:31:42 41 [Note] InnoDB: Waiting for purge to start
+2015-10-10 14:31:42 41 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.24-72.2 started; log sequence number 1625977
+2015-10-10 14:31:42 41 [Note] RSA private key file not found: /var/lib/mysql//private_key.pem. Some authentication plugins will not work.
+2015-10-10 14:31:42 41 [Note] RSA public key file not found: /var/lib/mysql//public_key.pem. Some authentication plugins will not work.
+2015-10-10 14:31:43 41 [Note] WSREP: Service disconnected.
+2015-10-10 14:31:44 41 [Note] WSREP: Some threads may fail to exit.
+2015-10-10 14:31:44 41 [Note] Binlog end
+2015-10-10 14:31:44 41 [Note] InnoDB: FTS optimize thread exiting.
+2015-10-10 14:31:44 41 [Note] InnoDB: Starting shutdown...
+2015-10-10 14:31:45 41 [Note] InnoDB: Shutdown completed; log sequence number 1625987
+Filling help tables...OK
+
+To start mysqld at boot time you have to copy
+support-files/mysql.server to the right place for your system
+
+PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+To do so, start the server, then issue the following commands:
+
+  /usr/bin/mysqladmin -u root password 'new-password'
+  /usr/bin/mysqladmin -u root -h pxc-node3 password 'new-password'
+
+Alternatively you can run:
+
+  /usr/bin/mysql_secure_installation
+
+which will also give you the option of removing the test
+databases and anonymous user created by default.  This is
+strongly recommended for production servers.
+
+See the manual for more instructions.
+
+You can start the MySQL daemon with:
+
+  cd /usr ; /usr/bin/mysqld_safe &
+
+You can test the MySQL daemon with mysql-test-run.pl
+
+  cd mysql-test ; perl mysql-test-run.pl
+
+Please report any problems with Percona XtraDB Cluster 5.6 at https://bugs.launchpad.net/percona-xtradb-cluster/+filebug
+
+The latest information about Percona XtraDB Cluster 5.6 is available on the web at
+
+  http://www.percona.com/doc/percona-xtradb-cluster/5.6/
+
+Support Percona XtraDB Cluster 5.6 by buying support at http://www.percona.com/products/mysql-support
+
+WARNING: Default config file /etc/mysql/my.cnf exists on the system
+This file will be read by default by the MySQL server
+If you do not want to use this, either remove it, or use the
+--defaults-file argument to mysqld_safe when starting the server
+
+Finished mysql_install_db
+2015-10-10 14:31:46 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+2015-10-10 14:31:46 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-10-10 14:31:46 0 [Note] mysqld (mysqld 5.6.24-72.2-56) starting as process 1 ...
+2015-10-10 14:31:46 1 [Note] WSREP: Read nil XID from storage engines, skipping position init
+2015-10-10 14:31:46 1 [Note] WSREP: wsrep_load(): loading provider library '/usr/lib/libgalera_smm.so'
+2015-10-10 14:31:46 1 [Note] WSREP: wsrep_load(): Galera 3.11(r93aca2d) by Codership Oy <info@codership.com> loaded successfully.
+2015-10-10 14:31:46 1 [Note] WSREP: CRC-32C: using hardware acceleration.
+2015-10-10 14:31:46 1 [Warning] WSREP: Could not open state file for reading: '/var/lib/mysql//grastate.dat'
+2015-10-10 14:31:46 1 [Note] WSREP: Found saved state: 00000000-0000-0000-0000-000000000000:-1
+2015-10-10 14:31:46 1 [Note] WSREP: Passing config to GCS: base_dir = /var/lib/mysql/; base_host = 172.17.53.7; base_port = 4567; cert.log_conflicts = no; debug = no; evs.auto_evict = 0; evs.delay_margin = PT1S; evs.delayed_keep_period = PT30S; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /var/lib/mysql/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = /var/lib/mysql//galera.cache; gcache.page_size = 128M; gcache.size = 128M; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.segment = 0; gmcast.version = 0; pc.announce_timeout = PT3S; pc.checksum = false; pc.ignore_quorum = false; pc.ignore_sb = false; 
+2015-10-10 14:31:46 1 [Note] WSREP: Service thread queue flushed.
+2015-10-10 14:31:46 1 [Note] WSREP: Assign initial position for certification: -1, protocol version: -1
+2015-10-10 14:31:46 1 [Note] WSREP: wsrep_sst_grab()
+2015-10-10 14:31:46 1 [Note] WSREP: Start replication
+2015-10-10 14:31:46 1 [Note] WSREP: Setting initial position to 00000000-0000-0000-0000-000000000000:-1
+2015-10-10 14:31:46 1 [Note] WSREP: protonet asio version 0
+2015-10-10 14:31:46 1 [Note] WSREP: Using CRC-32C for message checksums.
+2015-10-10 14:31:46 1 [Note] WSREP: backend: asio
+2015-10-10 14:31:46 1 [Warning] WSREP: access file(/var/lib/mysql//gvwstate.dat) failed(No such file or directory)
+2015-10-10 14:31:46 1 [Note] WSREP: restore pc from disk failed
+2015-10-10 14:31:46 1 [Note] WSREP: GMCast version 0
+2015-10-10 14:31:46 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+2015-10-10 14:31:46 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+2015-10-10 14:31:46 1 [Note] WSREP: EVS version 0
+2015-10-10 14:31:46 1 [Note] WSREP: gcomm: connecting to group 'galera_kubernetes', peer '10.254.44.150:,,10.254.173.170:'
+2015-10-10 14:31:46 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: tcp://172.17.18.0:4567 
+2015-10-10 14:31:47 1 [Note] WSREP: declaring 73c67943 at tcp://10.254.44.150:4567 stable
+2015-10-10 14:31:47 1 [Note] WSREP: declaring 9a530ef0 at tcp://10.254.173.170:4567 stable
+2015-10-10 14:31:48 1 [Note] WSREP: Node 73c67943 state prim
+2015-10-10 14:31:48 1 [Note] WSREP: view(view_id(PRIM,73c67943,3) memb {
+	73c67943,0
+	9a530ef0,0
+	a2b3384e,0
+} joined {
+} left {
+} partitioned {
+})
+2015-10-10 14:31:48 1 [Note] WSREP: save pc into disk
+2015-10-10 14:31:48 1 [Note] WSREP: gcomm: connected
+2015-10-10 14:31:48 1 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+2015-10-10 14:31:48 1 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+2015-10-10 14:31:48 1 [Note] WSREP: Opened channel 'galera_kubernetes'
+2015-10-10 14:31:48 1 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 2, memb_num = 3
+2015-10-10 14:31:48 1 [Note] WSREP: Waiting for SST to complete.
+2015-10-10 14:31:48 1 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+2015-10-10 14:31:48 1 [Note] WSREP: STATE EXCHANGE: sent state msg: a399f996-6f5b-11e5-8f18-1f793f8a88ff
+2015-10-10 14:31:48 1 [Note] WSREP: STATE EXCHANGE: got state msg: a399f996-6f5b-11e5-8f18-1f793f8a88ff from 0 (pxc-node1)
+2015-10-10 14:31:48 1 [Note] WSREP: STATE EXCHANGE: got state msg: a399f996-6f5b-11e5-8f18-1f793f8a88ff from 1 (pxc-node2)
+2015-10-10 14:31:48 1 [Note] WSREP: STATE EXCHANGE: got state msg: a399f996-6f5b-11e5-8f18-1f793f8a88ff from 2 (pxc-node3)
+2015-10-10 14:31:48 1 [Note] WSREP: Quorum results:
+	version    = 3,
+	component  = PRIMARY,
+	conf_id    = 2,
+	members    = 1/3 (joined/total),
+	act_id     = 0,
+	last_appl. = -1,
+	protocols  = 0/7/3 (gcs/repl/appl),
+	group UUID = 73c74c1b-6f5b-11e5-b368-5a7629763291
+2015-10-10 14:31:48 1 [Note] WSREP: Flow-control interval: [28, 28]
+2015-10-10 14:31:48 1 [Note] WSREP: Shifting OPEN -> PRIMARY (TO: 0)
+2015-10-10 14:31:48 1 [Note] WSREP: State transfer required: 
+	Group state: 73c74c1b-6f5b-11e5-b368-5a7629763291:0
+	Local state: 00000000-0000-0000-0000-000000000000:-1
+2015-10-10 14:31:48 1 [Note] WSREP: New cluster view: global state: 73c74c1b-6f5b-11e5-b368-5a7629763291:0, view# 3: Primary, number of nodes: 3, my index: 2, protocol version 3
+2015-10-10 14:31:48 1 [Warning] WSREP: Gap in state sequence. Need state transfer.
+2015-10-10 14:31:48 1 [Note] WSREP: Running: 'wsrep_sst_xtrabackup-v2 --role 'joiner' --address '172.17.53.7' --auth 'sst:sst' --datadir '/var/lib/mysql/' --defaults-file '/etc/mysql/my.cnf' --defaults-group-suffix '' --parent '1'  '' '
+WSREP_SST: [INFO] Streaming with xbstream (20151010 14:31:49.079)
+WSREP_SST: [INFO] Using socat as streamer (20151010 14:31:49.081)
+WSREP_SST: [INFO] Evaluating timeout -k 110 100 socat -u TCP-LISTEN:4444,reuseaddr stdio | xbstream -x; RC=( ${PIPESTATUS[@]} ) (20151010 14:31:49.107)
+2015-10-10 14:31:49 1 [Note] WSREP: Prepared SST request: xtrabackup-v2|172.17.53.7:4444/xtrabackup_sst//1
+2015-10-10 14:31:49 1 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2015-10-10 14:31:49 1 [Note] WSREP: REPL Protocols: 7 (3, 2)
+2015-10-10 14:31:49 1 [Note] WSREP: Service thread queue flushed.
+2015-10-10 14:31:49 1 [Note] WSREP: Assign initial position for certification: 0, protocol version: 3
+2015-10-10 14:31:49 1 [Note] WSREP: Service thread queue flushed.
+2015-10-10 14:31:49 1 [Warning] WSREP: Failed to prepare for incremental state transfer: Local state UUID (00000000-0000-0000-0000-000000000000) does not match group state UUID (73c74c1b-6f5b-11e5-b368-5a7629763291): 1 (Operation not permitted)
+	 at galera/src/replicator_str.cpp:prepare_for_IST():463. IST will be unavailable.
+2015-10-10 14:31:49 1 [Warning] WSREP: Member 2.0 (pxc-node3) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-10 14:31:49 1 [Note] WSREP: Requesting state transfer failed: -11(Resource temporarily unavailable). Will keep retrying every 1 second(s)
+2015-10-10 14:31:50 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') turning message relay requesting off
+2015-10-10 14:31:50 1 [Warning] WSREP: Member 2.0 (pxc-node3) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-10 14:31:51 1 [Warning] WSREP: Member 2.0 (pxc-node3) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-10 14:31:52 1 [Warning] WSREP: Member 2.0 (pxc-node3) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-10 14:31:53 1 [Warning] WSREP: Member 2.0 (pxc-node3) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-10 14:31:53 1 [Warning] WSREP: Could not find peer: 
+2015-10-10 14:31:53 1 [Note] WSREP: 0.0 (pxc-node1): State transfer to -1.-1 (left the group) complete.
+2015-10-10 14:31:53 1 [Note] WSREP: Member 0.0 (pxc-node1) synced with group.
+2015-10-10 14:31:54 1 [Note] WSREP: Member 2.0 (pxc-node3) requested state transfer from '*any*'. Selected 0.0 (pxc-node1)(SYNCED) as donor.
+2015-10-10 14:31:54 1 [Note] WSREP: Shifting PRIMARY -> JOINER (TO: 0)
+2015-10-10 14:31:54 1 [Note] WSREP: Requesting state transfer: success after 6 tries, donor: 0
+WSREP_SST: [INFO] Proceeding with SST (20151010 14:31:55.062)
+WSREP_SST: [INFO] Evaluating socat -u TCP-LISTEN:4444,reuseaddr stdio | xbstream -x; RC=( ${PIPESTATUS[@]} ) (20151010 14:31:55.063)
+WSREP_SST: [INFO] Cleaning the existing datadir and innodb-data/log directories (20151010 14:31:55.065)
+removed '/var/lib/mysql/ibdata1'
+removed '/var/lib/mysql/ib_logfile1'
+removed '/var/lib/mysql/ib_logfile0'
+removed '/var/lib/mysql/mysql/slave_worker_info.frm'
+removed '/var/lib/mysql/mysql/proxies_priv.frm'
+removed '/var/lib/mysql/mysql/proc.MYI'
+removed '/var/lib/mysql/mysql/procs_priv.frm'
+removed '/var/lib/mysql/mysql/user.MYD'
+removed '/var/lib/mysql/mysql/proc.MYD'
+removed '/var/lib/mysql/mysql/db.frm'
+removed '/var/lib/mysql/mysql/innodb_index_stats.ibd'
+removed '/var/lib/mysql/mysql/servers.frm'
+removed '/var/lib/mysql/mysql/ndb_binlog_index.frm'
+removed '/var/lib/mysql/mysql/time_zone_name.MYI'
+removed '/var/lib/mysql/mysql/columns_priv.MYI'
+removed '/var/lib/mysql/mysql/columns_priv.frm'
+removed '/var/lib/mysql/mysql/help_keyword.frm'
+removed '/var/lib/mysql/mysql/general_log.CSM'
+removed '/var/lib/mysql/mysql/help_topic.MYI'
+removed '/var/lib/mysql/mysql/db.MYI'
+removed '/var/lib/mysql/mysql/proc.frm'
+removed '/var/lib/mysql/mysql/ndb_binlog_index.MYD'
+removed '/var/lib/mysql/mysql/innodb_index_stats.frm'
+removed '/var/lib/mysql/mysql/slow_log.CSM'
+removed '/var/lib/mysql/mysql/slave_master_info.ibd'
+removed '/var/lib/mysql/mysql/help_relation.frm'
+removed '/var/lib/mysql/mysql/plugin.frm'
+removed '/var/lib/mysql/mysql/func.MYI'
+removed '/var/lib/mysql/mysql/ndb_binlog_index.MYI'
+removed '/var/lib/mysql/mysql/slave_worker_info.ibd'
+removed '/var/lib/mysql/mysql/time_zone_transition_type.frm'
+removed '/var/lib/mysql/mysql/proxies_priv.MYI'
+removed '/var/lib/mysql/mysql/time_zone_name.MYD'
+removed '/var/lib/mysql/mysql/func.MYD'
+removed '/var/lib/mysql/mysql/general_log.frm'
+removed '/var/lib/mysql/mysql/event.frm'
+removed '/var/lib/mysql/mysql/slave_relay_log_info.frm'
+removed '/var/lib/mysql/mysql/time_zone_transition.MYD'
+removed '/var/lib/mysql/mysql/time_zone_transition.MYI'
+removed '/var/lib/mysql/mysql/procs_priv.MYD'
+removed '/var/lib/mysql/mysql/time_zone.MYI'
+removed '/var/lib/mysql/mysql/time_zone_transition.frm'
+removed '/var/lib/mysql/mysql/help_topic.MYD'
+removed '/var/lib/mysql/mysql/slow_log.frm'
+removed '/var/lib/mysql/mysql/db.MYD'
+removed '/var/lib/mysql/mysql/innodb_table_stats.frm'
+removed '/var/lib/mysql/mysql/help_category.frm'
+removed '/var/lib/mysql/mysql/slow_log.CSV'
+removed '/var/lib/mysql/mysql/time_zone.MYD'
+removed '/var/lib/mysql/mysql/time_zone_name.frm'
+removed '/var/lib/mysql/mysql/event.MYD'
+removed '/var/lib/mysql/mysql/help_keyword.MYD'
+removed '/var/lib/mysql/mysql/servers.MYI'
+removed '/var/lib/mysql/mysql/tables_priv.MYD'
+removed '/var/lib/mysql/mysql/plugin.MYD'
+removed '/var/lib/mysql/mysql/help_topic.frm'
+removed '/var/lib/mysql/mysql/time_zone_leap_second.MYI'
+removed '/var/lib/mysql/mysql/tables_priv.MYI'
+removed '/var/lib/mysql/mysql/general_log.CSV'
+removed '/var/lib/mysql/mysql/time_zone_transition_type.MYD'
+removed '/var/lib/mysql/mysql/help_keyword.MYI'
+removed '/var/lib/mysql/mysql/user.MYI'
+removed '/var/lib/mysql/mysql/time_zone_leap_second.frm'
+removed '/var/lib/mysql/mysql/help_category.MYD'
+removed '/var/lib/mysql/mysql/help_relation.MYD'
+removed '/var/lib/mysql/mysql/help_category.MYI'
+removed '/var/lib/mysql/mysql/tables_priv.frm'
+removed '/var/lib/mysql/mysql/slave_master_info.frm'
+removed '/var/lib/mysql/mysql/innodb_table_stats.ibd'
+removed '/var/lib/mysql/mysql/plugin.MYI'
+removed '/var/lib/mysql/mysql/event.MYI'
+removed '/var/lib/mysql/mysql/help_relation.MYI'
+removed '/var/lib/mysql/mysql/time_zone_transition_type.MYI'
+removed '/var/lib/mysql/mysql/servers.MYD'
+removed '/var/lib/mysql/mysql/proxies_priv.MYD'
+removed '/var/lib/mysql/mysql/columns_priv.MYD'
+removed '/var/lib/mysql/mysql/slave_relay_log_info.ibd'
+removed '/var/lib/mysql/mysql/time_zone.frm'
+removed '/var/lib/mysql/mysql/time_zone_leap_second.MYD'
+removed '/var/lib/mysql/mysql/func.frm'
+removed '/var/lib/mysql/mysql/procs_priv.MYI'
+removed '/var/lib/mysql/mysql/user.frm'
+removed directory: '/var/lib/mysql/mysql'
+removed directory: '/var/lib/mysql/test'
+removed directory: '/var/lib/mysql/lost+found'
+removed '/var/lib/mysql/performance_schema/session_connect_attrs.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_global_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/users.frm'
+removed '/var/lib/mysql/performance_schema/setup_consumers.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_user_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_by_user_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_history_long.frm'
+removed '/var/lib/mysql/performance_schema/host_cache.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_host_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/objects_summary_global_by_type.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_history.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_account_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/socket_instances.frm'
+removed '/var/lib/mysql/performance_schema/performance_timers.frm'
+removed '/var/lib/mysql/performance_schema/table_io_waits_summary_by_table.frm'
+removed '/var/lib/mysql/performance_schema/file_summary_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_thread_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/file_instances.frm'
+removed '/var/lib/mysql/performance_schema/setup_actors.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_instance.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_digest.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_current.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_account_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/socket_summary_by_instance.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_by_account_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/file_summary_by_instance.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_history_long.frm'
+removed '/var/lib/mysql/performance_schema/setup_timers.frm'
+removed '/var/lib/mysql/performance_schema/socket_summary_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_current.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_global_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/table_io_waits_summary_by_index_usage.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_by_thread_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_current.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_user_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_thread_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/threads.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_global_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/hosts.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_host_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/table_lock_waits_summary_by_table.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_history_long.frm'
+removed '/var/lib/mysql/performance_schema/session_account_connect_attrs.frm'
+removed '/var/lib/mysql/performance_schema/accounts.frm'
+removed '/var/lib/mysql/performance_schema/db.opt'
+removed '/var/lib/mysql/performance_schema/cond_instances.frm'
+removed '/var/lib/mysql/performance_schema/mutex_instances.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_history.frm'
+removed '/var/lib/mysql/performance_schema/setup_instruments.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_history.frm'
+removed '/var/lib/mysql/performance_schema/setup_objects.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_by_host_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/rwlock_instances.frm'
+removed directory: '/var/lib/mysql/performance_schema'
+WSREP_SST: [INFO] Waiting for SST streaming to complete! (20151010 14:31:55.124)
+2015-10-10 14:32:08 1 [Warning] WSREP: Could not find peer: 
+2015-10-10 14:32:08 1 [Note] WSREP: 1.0 (pxc-node2): State transfer from -1.-1 (left the group) complete.
+2015-10-10 14:32:08 1 [Note] WSREP: Member 1.0 (pxc-node2) synced with group.
+2015-10-10 14:32:16 1 [Note] WSREP: 0.0 (pxc-node1): State transfer to 2.0 (pxc-node3) complete.
+2015-10-10 14:32:16 1 [Note] WSREP: Member 0.0 (pxc-node1) synced with group.
+WSREP_SST: [INFO] Preparing the backup at /var/lib/mysql//.sst (20151010 14:32:22.256)
+WSREP_SST: [INFO] Evaluating innobackupex --no-version-check  --apply-log $rebuildcmd ${DATA} &>${DATA}/innobackup.prepare.log (20151010 14:32:22.259)
+rm: cannot remove '/var/lib/mysql//innobackup.prepare.log': No such file or directory
+rm: cannot remove '/var/lib/mysql//innobackup.move.log': No such file or directory
+WSREP_SST: [INFO] Moving the backup to /var/lib/mysql/ (20151010 14:32:30.750)
+WSREP_SST: [INFO] Evaluating innobackupex --defaults-file=/etc/mysql/my.cnf  --defaults-group=mysqld --no-version-check   --move-back --force-non-empty-directories ${DATA} &>${DATA}/innobackup.move.log (20151010 14:32:30.752)
+WSREP_SST: [INFO] Move successful, removing /var/lib/mysql//.sst (20151010 14:32:30.973)
+WSREP_SST: [INFO] Galera co-ords from recovery: 73c74c1b-6f5b-11e5-b368-5a7629763291:2 (20151010 14:32:30.981)
+WSREP_SST: [INFO] Total time on joiner: 0 seconds (20151010 14:32:30.985)
+WSREP_SST: [INFO] Removing the sst_in_progress file (20151010 14:32:30.988)
+2015-10-10 14:32:30 1 [Note] WSREP: SST complete, seqno: 2
+2015-10-10 14:32:30 1 [Warning] Using unique option prefix myisam-recover instead of myisam-recover-options is deprecated and will be removed in a future release. Please use the full name instead.
+2015-10-10 14:32:31 1 [Note] Plugin 'FEDERATED' is disabled.
+2015-10-10 14:32:31 1 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-10-10 14:32:31 1 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-10-10 14:32:31 1 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-10-10 14:32:31 1 [Note] InnoDB: Memory barrier is not used
+2015-10-10 14:32:31 1 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2015-10-10 14:32:31 1 [Note] InnoDB: Using Linux native AIO
+2015-10-10 14:32:31 1 [Note] InnoDB: Using CPU crc32 instructions
+2015-10-10 14:32:31 1 [Note] InnoDB: Initializing buffer pool, size = 20.0M
+2015-10-10 14:32:31 1 [Note] InnoDB: Completed initialization of buffer pool
+2015-10-10 14:32:31 1 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-10-10 14:32:31 1 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-10-10 14:32:31 1 [Note] InnoDB: Waiting for purge to start
+2015-10-10 14:32:31 1 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.24-72.2 started; log sequence number 1634838
+2015-10-10 14:32:31 1 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: bd3b32c1-6f5b-11e5-bb07-0242ac113507.
+2015-10-10 14:32:31 1 [Note] RSA private key file not found: /var/lib/mysql//private_key.pem. Some authentication plugins will not work.
+2015-10-10 14:32:31 1 [Note] RSA public key file not found: /var/lib/mysql//public_key.pem. Some authentication plugins will not work.
+2015-10-10 14:32:31 1 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-10-10 14:32:31 1 [Note] IPv6 is available.
+2015-10-10 14:32:31 1 [Note]   - '::' resolves to '::';
+2015-10-10 14:32:31 1 [Note] Server socket created on IP: '::'.
+2015-10-10 14:32:31 1 [ERROR] mysqld: Table './mysql/user' is marked as crashed and should be repaired
+2015-10-10 14:32:31 1 [Warning] Checking table:   './mysql/user'
+2015-10-10 14:32:31 1 [ERROR] 1 client is using or hasn't closed the table properly
+2015-10-10 14:32:31 1 [Note] Event Scheduler: Loaded 0 events
+2015-10-10 14:32:31 1 [Note] WSREP: Signalling provider to continue.
+2015-10-10 14:32:31 1 [Note] WSREP: Initialized wsrep sidno 1
+2015-10-10 14:32:31 1 [Note] WSREP: SST received: 73c74c1b-6f5b-11e5-b368-5a7629763291:2
+2015-10-10 14:32:31 1 [Note] Execution of init_file '/tmp/mysql-first-time.sql' started.
+ERROR: 1396  Operation CREATE USER failed for 'root'@'%'
+2015-10-10 14:32:31 1 [Note] Execution of init_file '/tmp/mysql-first-time.sql' ended.
+2015-10-10 14:32:31 1 [Note] mysqld: ready for connections.
+Version: '5.6.24-72.2-56'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  Percona XtraDB Cluster (GPL), Release rel72.2, Revision 43abf03, WSREP version 25.11, wsrep_25.11
+2015-10-10 14:32:31 1 [Note] WSREP: 2.0 (pxc-node3): State transfer from 0.0 (pxc-node1) complete.
+2015-10-10 14:32:31 1 [Note] WSREP: Shifting JOINER -> JOINED (TO: 2)
+2015-10-10 14:32:31 1 [Note] WSREP: Member 2.0 (pxc-node3) synced with group.
+2015-10-10 14:32:31 1 [Note] WSREP: Shifting JOINED -> SYNCED (TO: 2)
+2015-10-10 14:32:31 1 [Note] WSREP: Synchronized with group, ready for connections
+2015-10-10 14:32:31 1 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2015-10-10 14:33:07 1 [Warning] IP address '172.17.53.1' could not be resolved: Name or service not known
+2015-10-10 14:33:14 1 [ERROR] Invalid (old?) table or database name 'lost+found'
+2015-10-10 14:33:14 1 [ERROR] Invalid (old?) table or database name 'lost+found'
+2015-10-10 14:33:20 1 [ERROR] Invalid (old?) table or database name 'lost+found'
+2015-10-10 14:33:20 1 [ERROR] Invalid (old?) table or database name 'lost+found'
+2015-10-10 15:58:29 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: tcp://10.254.173.170:4567 tcp://10.254.44.150:4567 tcp://172.17.18.0:4567 
+2015-10-10 15:58:30 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') reconnecting to 9a530ef0 (tcp://10.254.173.170:4567), attempt 0
+2015-10-10 15:58:30 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') reconnecting to 73c67943 (tcp://10.254.44.150:4567), attempt 0
+2015-10-10 15:58:33 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') reconnecting to 9a530ef0 (tcp://172.17.18.0:4567), attempt 0
+2015-10-10 15:58:33 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') reconnecting to 9a530ef0 (tcp://10.254.173.170:4567), attempt 0
+2015-10-10 15:58:33 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') reconnecting to 73c67943 (tcp://10.254.44.150:4567), attempt 0
+2015-10-10 15:58:34 1 [Note] WSREP: evs::proto(a2b3384e, OPERATIONAL, view_id(REG,73c67943,3)) suspecting node: 73c67943
+2015-10-10 15:58:34 1 [Note] WSREP: evs::proto(a2b3384e, OPERATIONAL, view_id(REG,73c67943,3)) suspected node without join message, declaring inactive
+2015-10-10 15:58:34 1 [Note] WSREP: evs::proto(a2b3384e, OPERATIONAL, view_id(REG,73c67943,3)) suspecting node: 9a530ef0
+2015-10-10 15:58:34 1 [Note] WSREP: evs::proto(a2b3384e, OPERATIONAL, view_id(REG,73c67943,3)) suspected node without join message, declaring inactive
+2015-10-10 15:58:34 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') reconnecting to 9a530ef0 (tcp://172.17.18.0:4567), attempt 0
+2015-10-10 15:58:35 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') reconnecting to 73c67943 (tcp://10.254.44.150:4567), attempt 0
+2015-10-10 15:58:35 1 [Note] WSREP: view(view_id(NON_PRIM,73c67943,3) memb {
+	a2b3384e,0
+} joined {
+} left {
+} partitioned {
+	73c67943,0
+	9a530ef0,0
+})
+2015-10-10 15:58:35 1 [Note] WSREP: New COMPONENT: primary = no, bootstrap = no, my_idx = 0, memb_num = 1
+2015-10-10 15:58:35 1 [Note] WSREP: Flow-control interval: [16, 16]
+2015-10-10 15:58:35 1 [Note] WSREP: view(view_id(NON_PRIM,a2b3384e,4) memb {
+	a2b3384e,0
+} joined {
+} left {
+} partitioned {
+	73c67943,0
+	9a530ef0,0
+})
+2015-10-10 15:58:35 1 [Note] WSREP: Received NON-PRIMARY.
+2015-10-10 15:58:35 1 [Note] WSREP: Shifting SYNCED -> OPEN (TO: 378)
+2015-10-10 15:58:35 1 [Note] WSREP: New COMPONENT: primary = no, bootstrap = no, my_idx = 0, memb_num = 1
+2015-10-10 15:58:35 1 [Note] WSREP: Flow-control interval: [16, 16]
+2015-10-10 15:58:35 1 [Note] WSREP: Received NON-PRIMARY.
+2015-10-10 15:58:35 1 [Note] WSREP: New cluster view: global state: 73c74c1b-6f5b-11e5-b368-5a7629763291:378, view# -1: non-Primary, number of nodes: 1, my index: 0, protocol version 3
+2015-10-10 15:58:35 1 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2015-10-10 15:58:35 1 [Note] WSREP: New cluster view: global state: 73c74c1b-6f5b-11e5-b368-5a7629763291:378, view# -1: non-Primary, number of nodes: 1, my index: 0, protocol version 3
+2015-10-10 15:58:35 1 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2015-10-10 15:58:35 1 [Note] WSREP: declaring 73c67943 at tcp://10.254.44.150:4567 stable
+2015-10-10 15:58:35 1 [Note] WSREP: declaring 9a530ef0 at tcp://10.254.173.170:4567 stable
+2015-10-10 15:58:35 1 [Note] WSREP: Node 73c67943 state prim
+2015-10-10 15:58:35 1 [Note] WSREP: view(view_id(PRIM,73c67943,5) memb {
+	73c67943,0
+	9a530ef0,0
+	a2b3384e,0
+} joined {
+} left {
+} partitioned {
+})
+2015-10-10 15:58:35 1 [Note] WSREP: save pc into disk
+2015-10-10 15:58:35 1 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 2, memb_num = 3
+2015-10-10 15:58:35 1 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+2015-10-10 15:58:35 1 [Note] WSREP: STATE EXCHANGE: sent state msg: c34a87e7-6f67-11e5-ae87-fff134056c10
+2015-10-10 15:58:35 1 [Note] WSREP: STATE EXCHANGE: got state msg: c34a87e7-6f67-11e5-ae87-fff134056c10 from 0 (pxc-node1)
+2015-10-10 15:58:35 1 [Note] WSREP: STATE EXCHANGE: got state msg: c34a87e7-6f67-11e5-ae87-fff134056c10 from 1 (pxc-node2)
+2015-10-10 15:58:35 1 [Note] WSREP: STATE EXCHANGE: got state msg: c34a87e7-6f67-11e5-ae87-fff134056c10 from 2 (pxc-node3)
+2015-10-10 15:58:35 1 [Note] WSREP: Quorum results:
+	version    = 3,
+	component  = PRIMARY,
+	conf_id    = 4,
+	members    = 3/3 (joined/total),
+	act_id     = 378,
+	last_appl. = 252,
+	protocols  = 0/7/3 (gcs/repl/appl),
+	group UUID = 73c74c1b-6f5b-11e5-b368-5a7629763291
+2015-10-10 15:58:35 1 [Note] WSREP: Flow-control interval: [28, 28]
+2015-10-10 15:58:35 1 [Note] WSREP: Restored state OPEN -> SYNCED (378)
+2015-10-10 15:58:35 1 [Note] WSREP: New cluster view: global state: 73c74c1b-6f5b-11e5-b368-5a7629763291:378, view# 5: Primary, number of nodes: 3, my index: 2, protocol version 3
+2015-10-10 15:58:35 1 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2015-10-10 15:58:35 1 [Note] WSREP: REPL Protocols: 7 (3, 2)
+2015-10-10 15:58:35 1 [Note] WSREP: Service thread queue flushed.
+2015-10-10 15:58:35 1 [Note] WSREP: Assign initial position for certification: 378, protocol version: 3
+2015-10-10 15:58:35 1 [Note] WSREP: Service thread queue flushed.
+2015-10-10 15:58:35 1 [Note] WSREP: Synchronized with group, ready for connections
+2015-10-10 15:58:35 1 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2015-10-10 15:58:38 1 [Note] WSREP: (a2b3384e, 'tcp://0.0.0.0:4567') turning message relay requesting off
+2015-10-10 16:05:06 1 [Warning] WSREP: Failed to report last committed 678, -4 (Interrupted system call)
+2015-10-10 16:06:38 1 [Warning] WSREP: Failed to report last committed 914, -4 (Interrupted system call)
+2015-10-10 16:07:04 1 [Warning] WSREP: Failed to report last committed 986, -4 (Interrupted system call)
+2015-10-10 16:07:16 1 [Warning] WSREP: Failed to report last committed 1010, -4 (Interrupted system call)
+2015-10-10 16:07:55 1 [Warning] WSREP: Failed to report last committed 1121, -4 (Interrupted system call)
+2015-10-10 16:08:54 1 [Warning] WSREP: Failed to report last committed 1252, -4 (Interrupted system call)
+2015-10-10 16:09:35 1 [Warning] WSREP: Failed to report last committed 1360, -4 (Interrupted system call)
+2015-10-10 16:10:13 1 [Warning] WSREP: Failed to report last committed 1488, -4 (Interrupted system call)
+2015-10-10 16:10:57 1 [Warning] WSREP: Failed to report last committed 1614, -4 (Interrupted system call)
+2015-10-10 16:11:40 1 [Warning] WSREP: Failed to report last committed 1739, -4 (Interrupted system call)
+2015-10-10 16:12:56 1 [Warning] WSREP: Failed to report last committed 1994, -4 (Interrupted system call)
+2015-10-10 16:13:37 1 [Warning] WSREP: Failed to report last committed 2122, -4 (Interrupted system call)
+2015-10-10 16:15:43 1 [Warning] WSREP: Failed to report last committed 2505, -4 (Interrupted system call)
+2015-10-10 16:16:23 1 [Warning] WSREP: Failed to report last committed 2632, -4 (Interrupted system call)
+2015-10-10 16:17:09 1 [Warning] WSREP: Failed to report last committed 2756, -4 (Interrupted system call)
+2015-10-10 16:17:54 1 [Warning] WSREP: Failed to report last committed 2884, -4 (Interrupted system call)
+2015-10-10 16:19:19 1 [Warning] WSREP: Failed to report last committed 3134, -4 (Interrupted system call)
+2015-10-10 16:20:00 1 [Warning] WSREP: Failed to report last committed 3270, -4 (Interrupted system call)
+2015-10-10 16:21:33 1 [Warning] WSREP: Failed to report last committed 3517, -4 (Interrupted system call)
+2015-10-10 16:22:17 1 [Warning] WSREP: Failed to report last committed 3651, -4 (Interrupted system call)
+2015-10-10 16:23:42 1 [Warning] WSREP: Failed to report last committed 3909, -4 (Interrupted system call)
+2015-10-10 16:24:18 1 [Warning] WSREP: Failed to report last committed 4034, -4 (Interrupted system call)
+2015-10-10 16:25:00 1 [Warning] WSREP: Failed to report last committed 4165, -4 (Interrupted system call)
+2015-10-10 16:26:27 1 [Warning] WSREP: Failed to report last committed 4425, -4 (Interrupted system call)
+2015-10-10 16:27:12 1 [Warning] WSREP: Failed to report last committed 4563, -4 (Interrupted system call)
+2015-10-10 16:28:02 1 [Warning] WSREP: Failed to report last committed 4692, -4 (Interrupted system call)
+2015-10-10 16:29:23 1 [Warning] WSREP: Failed to report last committed 4954, -4 (Interrupted system call)
+2015-10-10 16:30:07 1 [Warning] WSREP: Failed to report last committed 5084, -4 (Interrupted system call)
+2015-10-10 16:30:56 1 [Warning] WSREP: Failed to report last committed 5233, -4 (Interrupted system call)
+2015-10-10 16:32:24 1 [Warning] WSREP: Failed to report last committed 5518, -4 (Interrupted system call)
+2015-10-10 16:33:05 1 [Warning] WSREP: Failed to report last committed 5650, -4 (Interrupted system call)
+2015-10-10 16:34:34 1 [Warning] WSREP: Failed to report last committed 5925, -4 (Interrupted system call)
+2015-10-10 16:36:02 1 [Warning] WSREP: Failed to report last committed 6187, -4 (Interrupted system call)
+2015-10-10 16:36:49 1 [Warning] WSREP: Failed to report last committed 6313, -4 (Interrupted system call)
+2015-10-10 16:38:06 1 [Warning] WSREP: Failed to report last committed 6558, -4 (Interrupted system call)
+2015-10-10 16:39:35 1 [Warning] WSREP: Failed to report last committed 6802, -4 (Interrupted system call)
+2015-10-10 16:40:18 1 [Warning] WSREP: Failed to report last committed 6919, -4 (Interrupted system call)
+2015-10-10 16:40:29 1 [Warning] WSREP: Failed to report last committed 6954, -4 (Interrupted system call)
+2015-10-10 16:41:11 1 [Warning] WSREP: Failed to report last committed 7072, -4 (Interrupted system call)
+2015-10-10 16:41:55 1 [Warning] WSREP: Failed to report last committed 7180, -4 (Interrupted system call)
+2015-10-10 16:42:54 1 [Warning] WSREP: Failed to report last committed 7358, -4 (Interrupted system call)
+2015-10-10 16:43:34 1 [Warning] WSREP: Failed to report last committed 7478, -4 (Interrupted system call)
+2015-10-10 16:44:21 1 [Warning] WSREP: Failed to report last committed 7604, -4 (Interrupted system call)
+2015-10-10 16:45:04 1 [Warning] WSREP: Failed to report last committed 7740, -4 (Interrupted system call)
+2015-10-10 16:47:59 1 [Warning] WSREP: Failed to report last committed 8242, -4 (Interrupted system call)
+2015-10-10 16:48:45 1 [Warning] WSREP: Failed to report last committed 8376, -4 (Interrupted system call)
+2015-10-10 16:49:23 1 [Warning] WSREP: Failed to report last committed 8497, -4 (Interrupted system call)
+2015-10-10 16:50:39 1 [Warning] WSREP: Failed to report last committed 8759, -4 (Interrupted system call)
+2015-10-10 16:51:26 1 [Warning] WSREP: Failed to report last committed 8886, -4 (Interrupted system call)
+2015-10-10 16:52:06 1 [Warning] WSREP: Failed to report last committed 9018, -4 (Interrupted system call)
+2015-10-10 16:52:40 1 [Warning] WSREP: Failed to report last committed 9126, -4 (Interrupted system call)
+2015-10-10 16:54:05 1 [Warning] WSREP: Failed to report last committed 9384, -4 (Interrupted system call)
+2015-10-10 16:54:47 1 [Warning] WSREP: Failed to report last committed 9516, -4 (Interrupted system call)
+2015-10-10 16:55:58 1 [Warning] WSREP: Failed to report last committed 9716, -4 (Interrupted system call)
+2015-10-10 16:56:42 1 [Warning] WSREP: Failed to report last committed 9842, -4 (Interrupted system call)
+2015-10-10 16:58:11 1 [Warning] WSREP: Failed to report last committed 10102, -4 (Interrupted system call)
+2015-10-10 16:59:42 1 [Warning] WSREP: Failed to report last committed 10357, -4 (Interrupted system call)
+2015-10-10 17:00:25 1 [Warning] WSREP: Failed to report last committed 10484, -4 (Interrupted system call)
+2015-10-10 17:01:42 1 [Warning] WSREP: Failed to report last committed 10741, -4 (Interrupted system call)
+2015-10-10 17:03:02 1 [Warning] WSREP: Failed to report last committed 11001, -4 (Interrupted system call)
+2015-10-10 17:03:40 1 [Warning] WSREP: Failed to report last committed 11129, -4 (Interrupted system call)
+2015-10-10 17:04:21 1 [Warning] WSREP: Failed to report last committed 11252, -4 (Interrupted system call)
+2015-10-10 17:05:05 1 [Warning] WSREP: Failed to report last committed 11382, -4 (Interrupted system call)
+2015-10-10 17:06:23 1 [Warning] WSREP: Failed to report last committed 11637, -4 (Interrupted system call)
+2015-10-10 17:07:49 1 [Warning] WSREP: Failed to report last committed 11891, -4 (Interrupted system call)
+2015-10-10 17:08:31 1 [Warning] WSREP: Failed to report last committed 12023, -4 (Interrupted system call)
+2015-10-10 17:09:16 1 [Warning] WSREP: Failed to report last committed 12146, -4 (Interrupted system call)
+2015-10-10 17:11:21 1 [Warning] WSREP: Failed to report last committed 12532, -4 (Interrupted system call)
+2015-10-10 17:12:06 1 [Warning] WSREP: Failed to report last committed 12658, -4 (Interrupted system call)
+2015-10-10 17:14:00 1 [Warning] WSREP: Failed to report last committed 13026, -4 (Interrupted system call)
+2015-10-10 17:19:37 1 [Warning] WSREP: Failed to report last committed 14082, -4 (Interrupted system call)
+2015-10-10 17:20:20 1 [Warning] WSREP: Failed to report last committed 14219, -4 (Interrupted system call)
+2015-10-10 17:25:57 1 [Warning] WSREP: Failed to report last committed 15292, -4 (Interrupted system call)
+2015-10-10 17:26:43 1 [Warning] WSREP: Failed to report last committed 15417, -4 (Interrupted system call)
+2015-10-10 17:27:25 1 [Warning] WSREP: Failed to report last committed 15556, -4 (Interrupted system call)
+2015-10-10 17:28:39 1 [Warning] WSREP: Failed to report last committed 15818, -4 (Interrupted system call)
+2015-10-10 17:30:06 1 [Warning] WSREP: Failed to report last committed 16074, -4 (Interrupted system call)
+2015-10-10 17:37:17 1 [Warning] WSREP: Failed to report last committed 17486, -4 (Interrupted system call)
+2015-10-10 17:41:46 1 [Warning] WSREP: Failed to report last committed 17768, -4 (Interrupted system call)
+2015-10-10 17:42:34 1 [Warning] WSREP: Failed to report last committed 17879, -4 (Interrupted system call)
+2015-10-10 17:44:00 1 [Warning] WSREP: Failed to report last committed 18098, -4 (Interrupted system call)
+2015-10-10 17:44:43 1 [Warning] WSREP: Failed to report last committed 18212, -4 (Interrupted system call)
+2015-10-10 17:45:25 1 [Warning] WSREP: Failed to report last committed 18327, -4 (Interrupted system call)
+2015-10-10 17:46:42 1 [Warning] WSREP: Failed to report last committed 18554, -4 (Interrupted system call)
+2015-10-10 17:47:30 1 [Warning] WSREP: Failed to report last committed 18678, -4 (Interrupted system call)
+2015-10-10 17:48:47 1 [Warning] WSREP: Failed to report last committed 18936, -4 (Interrupted system call)
+2015-10-10 17:49:27 1 [Warning] WSREP: Failed to report last committed 19059, -4 (Interrupted system call)
+2015-10-10 17:50:05 1 [Warning] WSREP: Failed to report last committed 19184, -4 (Interrupted system call)
+2015-10-10 17:50:49 1 [Warning] WSREP: Failed to report last committed 19318, -4 (Interrupted system call)
+2015-10-10 17:51:37 1 [Warning] WSREP: Failed to report last committed 19442, -4 (Interrupted system call)
+2015-10-10 17:52:25 1 [Warning] WSREP: Failed to report last committed 19572, -4 (Interrupted system call)
+2015-10-10 17:53:43 1 [Warning] WSREP: Failed to report last committed 19830, -4 (Interrupted system call)
+2015-10-10 18:00:11 1 [Warning] WSREP: Failed to report last committed 21059, -4 (Interrupted system call)
+2015-10-10 18:00:57 1 [Warning] WSREP: Failed to report last committed 21185, -4 (Interrupted system call)
+2015-10-10 18:01:47 1 [Warning] WSREP: Failed to report last committed 21310, -4 (Interrupted system call)
+2015-10-10 18:02:29 1 [Warning] WSREP: Failed to report last committed 21439, -4 (Interrupted system call)
+2015-10-10 18:03:09 1 [Warning] WSREP: Failed to report last committed 21569, -4 (Interrupted system call)
+2015-10-10 18:09:22 1 [Warning] WSREP: Failed to report last committed 22739, -4 (Interrupted system call)
+2015-10-10 18:10:09 1 [Warning] WSREP: Failed to report last committed 22866, -4 (Interrupted system call)
+2015-10-10 18:11:37 1 [Warning] WSREP: Failed to report last committed 23124, -4 (Interrupted system call)
+2015-10-10 18:12:20 1 [Warning] WSREP: Failed to report last committed 23248, -4 (Interrupted system call)
+2015-10-10 18:13:00 1 [Warning] WSREP: Failed to report last committed 23379, -4 (Interrupted system call)
+2015-10-10 18:13:46 1 [Warning] WSREP: Failed to report last committed 23505, -4 (Interrupted system call)
+2015-10-10 18:14:36 1 [Warning] WSREP: Failed to report last committed 23634, -4 (Interrupted system call)
+2015-10-10 18:15:54 1 [Warning] WSREP: Failed to report last committed 23891, -4 (Interrupted system call)
+2015-10-10 18:17:18 1 [Warning] WSREP: Failed to report last committed 24150, -4 (Interrupted system call)
+2015-10-10 18:18:04 1 [Warning] WSREP: Failed to report last committed 24274, -4 (Interrupted system call)
+2015-10-10 18:19:52 1 [Warning] WSREP: Failed to report last committed 24627, -4 (Interrupted system call)
+2015-10-10 18:21:35 1 [Warning] WSREP: Failed to report last committed 24879, -4 (Interrupted system call)
+2015-10-10 18:22:23 1 [Warning] WSREP: Failed to report last committed 25010, -4 (Interrupted system call)
+2015-10-10 18:23:01 1 [Warning] WSREP: Failed to report last committed 25140, -4 (Interrupted system call)
+2015-10-10 18:23:48 1 [Warning] WSREP: Failed to report last committed 25263, -4 (Interrupted system call)
+2015-10-10 18:25:12 1 [Warning] WSREP: Failed to report last committed 25519, -4 (Interrupted system call)
+2015-10-10 18:26:38 1 [Warning] WSREP: Failed to report last committed 25777, -4 (Interrupted system call)
+2015-10-10 18:28:00 1 [Warning] WSREP: Failed to report last committed 26036, -4 (Interrupted system call)
+2015-10-10 18:28:37 1 [Warning] WSREP: Failed to report last committed 26169, -4 (Interrupted system call)
+2015-10-10 18:29:25 1 [Warning] WSREP: Failed to report last committed 26300, -4 (Interrupted system call)
+2015-10-10 18:30:09 1 [Warning] WSREP: Failed to report last committed 26431, -4 (Interrupted system call)
+2015-10-10 18:30:56 1 [Warning] WSREP: Failed to report last committed 26580, -4 (Interrupted system call)
+2015-10-10 18:31:44 1 [Warning] WSREP: Failed to report last committed 26715, -4 (Interrupted system call)
+2015-10-10 18:32:30 1 [Warning] WSREP: Failed to report last committed 26852, -4 (Interrupted system call)
+2015-10-10 18:33:17 1 [Warning] WSREP: send monitor wait timed out, waited for PT10.0011S
+2015-10-10 18:33:17 1 [Warning] WSREP: Failed to report last committed 26983, -4 (Interrupted system call)
+2015-10-10 18:36:22 1 [Warning] WSREP: Failed to report last committed 27585, -4 (Interrupted system call)
+2015-10-10 18:37:13 1 [Warning] WSREP: Failed to report last committed 27709, -4 (Interrupted system call)
+2015-10-10 18:37:57 1 [Warning] WSREP: Failed to report last committed 27831, -4 (Interrupted system call)
+2015-10-10 18:39:29 1 [Warning] WSREP: Failed to report last committed 28069, -4 (Interrupted system call)
+2015-10-10 18:40:21 1 [Warning] WSREP: Failed to report last committed 28191, -4 (Interrupted system call)
+2015-10-10 18:41:01 1 [Warning] WSREP: Failed to report last committed 28309, -4 (Interrupted system call)
+2015-10-10 18:43:08 1 [Warning] WSREP: Failed to report last committed 28678, -4 (Interrupted system call)
+2015-10-10 18:44:00 1 [Warning] WSREP: Failed to report last committed 28804, -4 (Interrupted system call)
+2015-10-10 18:44:41 1 [Warning] WSREP: Failed to report last committed 28931, -4 (Interrupted system call)
+2015-10-10 18:45:25 1 [Warning] WSREP: Failed to report last committed 29060, -4 (Interrupted system call)
+2015-10-10 18:46:06 1 [Warning] WSREP: Failed to report last committed 29189, -4 (Interrupted system call)
+2015-10-10 18:46:48 1 [Warning] WSREP: Failed to report last committed 29317, -4 (Interrupted system call)
+2015-10-10 18:48:03 1 [Warning] WSREP: Failed to report last committed 29575, -4 (Interrupted system call)
+2015-10-10 18:49:28 1 [Warning] WSREP: Failed to report last committed 29831, -4 (Interrupted system call)
+2015-10-10 18:50:55 1 [Warning] WSREP: Failed to report last committed 30084, -4 (Interrupted system call)
+2015-10-10 18:52:06 1 [Warning] WSREP: Failed to report last committed 30339, -4 (Interrupted system call)
+2015-10-10 18:52:35 1 [Warning] WSREP: Failed to report last committed 30447, -4 (Interrupted system call)
+2015-10-10 18:58:04 1 [Warning] WSREP: Failed to report last committed 31432, -4 (Interrupted system call)
+2015-10-10 18:59:15 1 [Warning] WSREP: Failed to report last committed 31653, -4 (Interrupted system call)
+2015-10-10 18:59:56 1 [Warning] WSREP: Failed to report last committed 31786, -4 (Interrupted system call)
+2015-10-10 19:00:50 1 [Warning] WSREP: Failed to report last committed 31913, -4 (Interrupted system call)
+2015-10-10 19:01:33 1 [Warning] WSREP: Failed to report last committed 32038, -4 (Interrupted system call)
+2015-10-10 19:02:21 1 [Warning] WSREP: Failed to report last committed 32167, -4 (Interrupted system call)
+2015-10-10 19:03:01 1 [Warning] WSREP: Failed to report last committed 32296, -4 (Interrupted system call)
+2015-10-10 19:03:53 1 [Warning] WSREP: Failed to report last committed 32424, -4 (Interrupted system call)
+2015-10-10 19:04:34 1 [Warning] WSREP: Failed to report last committed 32549, -4 (Interrupted system call)
+2015-10-10 19:05:08 1 [Warning] WSREP: Failed to report last committed 32682, -4 (Interrupted system call)
+2015-10-10 19:07:06 1 [Warning] WSREP: Failed to report last committed 33065, -4 (Interrupted system call)
+2015-10-10 19:07:45 1 [Warning] WSREP: Failed to report last committed 33192, -4 (Interrupted system call)
+2015-10-10 19:08:26 1 [Warning] WSREP: Failed to report last committed 33320, -4 (Interrupted system call)
+2015-10-10 19:15:12 1 [Warning] WSREP: Failed to report last committed 34547, -4 (Interrupted system call)
+2015-10-10 19:16:01 1 [Warning] WSREP: Failed to report last committed 34677, -4 (Interrupted system call)
+2015-10-10 19:16:51 1 [Warning] WSREP: Failed to report last committed 34801, -4 (Interrupted system call)
+2015-10-10 19:17:40 1 [Warning] WSREP: Failed to report last committed 34959, -4 (Interrupted system call)
+2015-10-10 19:18:55 1 [Warning] WSREP: Failed to report last committed 35218, -4 (Interrupted system call)
+2015-10-10 19:19:31 1 [Warning] WSREP: Failed to report last committed 35326, -4 (Interrupted system call)
+2015-10-10 19:22:18 1 [Warning] WSREP: Failed to report last committed 35741, -4 (Interrupted system call)
+2015-10-10 19:23:08 1 [Warning] WSREP: Failed to report last committed 35869, -4 (Interrupted system call)
+2015-10-10 19:23:51 1 [Warning] WSREP: Failed to report last committed 35995, -4 (Interrupted system call)
+2015-10-10 19:25:19 1 [Warning] WSREP: Failed to report last committed 36253, -4 (Interrupted system call)
+2015-10-10 19:26:07 1 [Warning] WSREP: Failed to report last committed 36383, -4 (Interrupted system call)
+2015-10-10 19:26:45 1 [Warning] WSREP: Failed to report last committed 36513, -4 (Interrupted system call)
+2015-10-10 19:27:41 1 [Warning] WSREP: Failed to report last committed 36649, -4 (Interrupted system call)
+2015-10-10 19:28:29 1 [Warning] WSREP: Failed to report last committed 36778, -4 (Interrupted system call)
+2015-10-10 19:29:12 1 [Warning] WSREP: Failed to report last committed 36906, -4 (Interrupted system call)
+2015-10-10 19:30:04 1 [Warning] WSREP: Failed to report last committed 37034, -4 (Interrupted system call)
+2015-10-10 19:30:44 1 [Warning] WSREP: send monitor wait timed out, waited for PT10.3169S
+2015-10-10 19:30:44 1 [Warning] WSREP: Failed to report last committed 37166, -4 (Interrupted system call)
+2015-10-10 19:32:08 1 [Warning] WSREP: Failed to report last committed 37433, -4 (Interrupted system call)
+2015-10-10 19:32:52 1 [Warning] WSREP: Failed to report last committed 37559, -4 (Interrupted system call)
+2015-10-10 19:33:42 1 [Warning] WSREP: Failed to report last committed 37688, -4 (Interrupted system call)
+2015-10-10 19:34:32 1 [Warning] WSREP: send monitor wait timed out, waited for PT10.5446S
+2015-10-10 19:34:32 1 [Warning] WSREP: Failed to report last committed 37825, -4 (Interrupted system call)
+2015-10-10 19:36:02 1 [Warning] WSREP: Failed to report last committed 38092, -4 (Interrupted system call)
+2015-10-10 19:37:58 1 [Warning] WSREP: Failed to report last committed 38508, -4 (Interrupted system call)
+2015-10-10 19:43:42 1 [Warning] WSREP: Failed to report last committed 39245, -4 (Interrupted system call)
+2015-10-10 19:44:53 1 [Warning] WSREP: Failed to report last committed 39435, -4 (Interrupted system call)
+2015-10-10 19:46:20 1 [Warning] WSREP: Failed to report last committed 39653, -4 (Interrupted system call)
+2015-10-10 19:48:38 1 [Warning] WSREP: Failed to report last committed 40037, -4 (Interrupted system call)
+2015-10-10 19:49:23 1 [Warning] WSREP: Failed to report last committed 40168, -4 (Interrupted system call)
+2015-10-10 19:50:07 1 [Warning] WSREP: Failed to report last committed 40292, -4 (Interrupted system call)
+2015-10-10 19:50:55 1 [Warning] WSREP: Failed to report last committed 40421, -4 (Interrupted system call)
+2015-10-10 19:52:23 1 [Warning] WSREP: Failed to report last committed 40675, -4 (Interrupted system call)
+2015-10-10 19:53:42 1 [Warning] WSREP: Failed to report last committed 40931, -4 (Interrupted system call)
+2015-10-10 19:54:19 1 [Warning] WSREP: Failed to report last committed 41060, -4 (Interrupted system call)
+2015-10-10 19:55:02 1 [Warning] WSREP: Failed to report last committed 41197, -4 (Interrupted system call)
+2015-10-10 19:55:47 1 [Warning] WSREP: Failed to report last committed 41319, -4 (Interrupted system call)
+2015-10-10 19:56:44 1 [Warning] WSREP: Failed to report last committed 41444, -4 (Interrupted system call)
+2015-10-10 19:57:35 1 [Warning] WSREP: Failed to report last committed 41573, -4 (Interrupted system call)
+2015-10-10 19:59:00 1 [Warning] WSREP: Failed to report last committed 41832, -4 (Interrupted system call)
+2015-10-10 19:59:57 1 [Warning] WSREP: Failed to report last committed 41957, -4 (Interrupted system call)
+2015-10-10 20:00:35 1 [Warning] WSREP: Failed to report last committed 42087, -4 (Interrupted system call)
+2015-10-10 20:01:40 1 [Warning] WSREP: Failed to report last committed 42305, -4 (Interrupted system call)
+2015-10-10 20:03:14 1 [Warning] WSREP: Failed to report last committed 42560, -4 (Interrupted system call)
+2015-10-10 20:04:39 1 [Warning] WSREP: Failed to report last committed 42813, -4 (Interrupted system call)
+2015-10-10 20:05:25 1 [Warning] WSREP: Failed to report last committed 42945, -4 (Interrupted system call)
+2015-10-10 20:06:04 1 [Warning] WSREP: Failed to report last committed 43071, -4 (Interrupted system call)
+2015-10-10 20:06:45 1 [Warning] WSREP: Failed to report last committed 43202, -4 (Interrupted system call)
+2015-10-10 20:08:55 1 [Warning] WSREP: Failed to report last committed 43584, -4 (Interrupted system call)
+2015-10-10 20:09:37 1 [Warning] WSREP: Failed to report last committed 43712, -4 (Interrupted system call)
+2015-10-10 20:12:20 1 [Warning] WSREP: Failed to report last committed 44224, -4 (Interrupted system call)
+2015-10-10 20:12:55 1 [Warning] WSREP: Failed to report last committed 44328, -4 (Interrupted system call)
+2015-10-10 20:13:57 1 [Warning] WSREP: Failed to report last committed 44535, -4 (Interrupted system call)
+2015-10-10 20:14:44 1 [Warning] WSREP: Failed to report last committed 44663, -4 (Interrupted system call)
+2015-10-10 20:22:36 1 [Warning] WSREP: Failed to report last committed 46072, -4 (Interrupted system call)
+2015-10-10 20:23:15 1 [Warning] WSREP: Failed to report last committed 46200, -4 (Interrupted system call)
+2015-10-10 20:24:02 1 [Warning] WSREP: Failed to report last committed 46343, -4 (Interrupted system call)
+2015-10-10 20:24:54 1 [Warning] WSREP: Failed to report last committed 46467, -4 (Interrupted system call)
+2015-10-10 20:26:21 1 [Warning] WSREP: Failed to report last committed 46724, -4 (Interrupted system call)
+2015-10-10 20:27:01 1 [Warning] WSREP: Failed to report last committed 46853, -4 (Interrupted system call)
+2015-10-10 20:27:46 1 [Warning] WSREP: Failed to report last committed 46979, -4 (Interrupted system call)
+2015-10-10 20:29:06 1 [Warning] WSREP: Failed to report last committed 47238, -4 (Interrupted system call)
+2015-10-10 20:30:29 1 [Warning] WSREP: Failed to report last committed 47510, -4 (Interrupted system call)
+2015-10-10 20:32:29 1 [Warning] WSREP: Failed to report last committed 47852, -4 (Interrupted system call)
+2015-10-10 20:33:20 1 [Warning] WSREP: Failed to report last committed 47990, -4 (Interrupted system call)
+2015-10-10 20:38:38 1 [Warning] WSREP: Failed to report last committed 49001, -4 (Interrupted system call)
+2015-10-10 20:44:02 1 [Warning] WSREP: Failed to report last committed 49936, -4 (Interrupted system call)
+2015-10-10 20:55:04 1 [Warning] WSREP: Failed to report last committed 51843, -4 (Interrupted system call)
+2015-10-10 20:55:44 1 [Warning] WSREP: Failed to report last committed 51975, -4 (Interrupted system call)
+2015-10-10 20:57:57 1 [Warning] WSREP: Failed to report last committed 52357, -4 (Interrupted system call)
+2015-10-10 20:59:06 1 [Warning] WSREP: Failed to report last committed 52568, -4 (Interrupted system call)
+2015-10-10 20:59:43 1 [Warning] WSREP: Failed to report last committed 52664, -4 (Interrupted system call)
+2015-10-10 21:00:32 1 [Warning] WSREP: Failed to report last committed 52791, -4 (Interrupted system call)
+2015-10-10 21:01:17 1 [Warning] WSREP: Failed to report last committed 52919, -4 (Interrupted system call)
+2015-10-10 21:02:46 1 [Warning] WSREP: Failed to report last committed 53176, -4 (Interrupted system call)
+2015-10-10 21:04:53 1 [Warning] WSREP: Failed to report last committed 53563, -4 (Interrupted system call)
+2015-10-10 21:05:36 1 [Warning] WSREP: Failed to report last committed 53689, -4 (Interrupted system call)
+2015-10-10 21:06:24 1 [Warning] WSREP: Failed to report last committed 53817, -4 (Interrupted system call)
+2015-10-10 21:09:47 1 [Warning] WSREP: Failed to report last committed 54483, -4 (Interrupted system call)
+2015-10-10 21:10:39 1 [Warning] WSREP: Failed to report last committed 54633, -4 (Interrupted system call)
+2015-10-10 21:27:30 1 [Warning] WSREP: Failed to report last committed 57582, -4 (Interrupted system call)
+2015-10-10 21:44:44 1 [Warning] WSREP: Failed to report last committed 60179, -4 (Interrupted system call)
+2015-10-10 21:45:06 1 [Warning] WSREP: Failed to report last committed 60240, -4 (Interrupted system call)
+2015-10-10 21:45:48 1 [Warning] WSREP: Failed to report last committed 60344, -4 (Interrupted system call)
+2015-10-10 21:48:24 1 [Warning] WSREP: Failed to report last committed 60804, -4 (Interrupted system call)
+2015-10-10 21:51:47 1 [Warning] WSREP: Failed to report last committed 61379, -4 (Interrupted system call)
+2015-10-10 21:52:30 1 [Warning] WSREP: Failed to report last committed 61507, -4 (Interrupted system call)
+2015-10-10 21:53:25 1 [Warning] WSREP: Failed to report last committed 61633, -4 (Interrupted system call)
+2015-10-10 21:54:54 1 [Warning] WSREP: Failed to report last committed 61889, -4 (Interrupted system call)
+2015-10-10 21:55:41 1 [Warning] WSREP: Failed to report last committed 62017, -4 (Interrupted system call)
+2015-10-10 21:56:24 1 [Warning] WSREP: Failed to report last committed 62145, -4 (Interrupted system call)
+2015-10-10 21:57:13 1 [Warning] WSREP: Failed to report last committed 62275, -4 (Interrupted system call)
+2015-10-10 21:59:33 1 [Warning] WSREP: Failed to report last committed 62656, -4 (Interrupted system call)
+2015-10-10 22:00:20 1 [Warning] WSREP: Failed to report last committed 62784, -4 (Interrupted system call)
+2015-10-10 22:01:12 1 [Warning] WSREP: Failed to report last committed 62914, -4 (Interrupted system call)
+2015-10-10 22:02:39 1 [Warning] WSREP: Failed to report last committed 63168, -4 (Interrupted system call)
+2015-10-10 22:03:21 1 [Warning] WSREP: Failed to report last committed 63299, -4 (Interrupted system call)
+2015-10-10 22:04:00 1 [Warning] WSREP: Failed to report last committed 63424, -4 (Interrupted system call)
+2015-10-10 22:04:48 1 [Warning] WSREP: Failed to report last committed 63553, -4 (Interrupted system call)
+2015-10-10 22:05:37 1 [Warning] WSREP: Failed to report last committed 63683, -4 (Interrupted system call)
+2015-10-10 22:12:41 1 [Warning] WSREP: Failed to report last committed 65014, -4 (Interrupted system call)
+2015-10-10 22:37:06 1 [Warning] WSREP: Failed to report last committed 69451, -4 (Interrupted system call)
+2015-10-10 22:38:30 1 [Warning] WSREP: Failed to report last committed 69659, -4 (Interrupted system call)
+2015-10-10 22:39:14 1 [Warning] WSREP: Failed to report last committed 69781, -4 (Interrupted system call)
+2015-10-10 22:44:31 1 [Warning] WSREP: Failed to report last committed 70679, -4 (Interrupted system call)
+2015-10-10 22:45:11 1 [Warning] WSREP: Failed to report last committed 70808, -4 (Interrupted system call)
+2015-10-10 22:45:58 1 [Warning] WSREP: Failed to report last committed 70936, -4 (Interrupted system call)
+2015-10-10 22:46:50 1 [Warning] WSREP: Failed to report last committed 71061, -4 (Interrupted system call)
+2015-10-10 22:47:37 1 [Warning] WSREP: Failed to report last committed 71193, -4 (Interrupted system call)
+2015-10-10 22:48:24 1 [Warning] WSREP: Failed to report last committed 71316, -4 (Interrupted system call)
+2015-10-10 22:49:06 1 [Warning] WSREP: Failed to report last committed 71444, -4 (Interrupted system call)
+2015-10-10 22:50:42 1 [Warning] WSREP: Failed to report last committed 71704, -4 (Interrupted system call)
+2015-10-10 22:52:08 1 [Warning] WSREP: Failed to report last committed 71963, -4 (Interrupted system call)
+2015-10-10 22:52:54 1 [Warning] WSREP: Failed to report last committed 72085, -4 (Interrupted system call)
+2015-10-10 22:53:44 1 [Warning] WSREP: Failed to report last committed 72214, -4 (Interrupted system call)
+2015-10-10 22:54:30 1 [Warning] WSREP: Failed to report last committed 72342, -4 (Interrupted system call)
+2015-10-10 22:56:11 1 [Warning] WSREP: Failed to report last committed 72725, -4 (Interrupted system call)
+2015-10-10 22:57:46 1 [Warning] WSREP: Failed to report last committed 72973, -4 (Interrupted system call)
+2015-10-10 22:58:34 1 [Warning] WSREP: Failed to report last committed 73100, -4 (Interrupted system call)
+2015-10-10 23:00:03 1 [Warning] WSREP: Failed to report last committed 73360, -4 (Interrupted system call)
+2015-10-10 23:01:29 1 [Warning] WSREP: Failed to report last committed 73618, -4 (Interrupted system call)
+2015-10-10 23:02:16 1 [Warning] WSREP: Failed to report last committed 73745, -4 (Interrupted system call)
+2015-10-10 23:03:01 1 [Warning] WSREP: Failed to report last committed 73871, -4 (Interrupted system call)
+2015-10-10 23:03:47 1 [Warning] WSREP: Failed to report last committed 73998, -4 (Interrupted system call)
+2015-10-10 23:05:15 1 [Warning] WSREP: Failed to report last committed 74254, -4 (Interrupted system call)
+2015-10-10 23:06:41 1 [Warning] WSREP: Failed to report last committed 74508, -4 (Interrupted system call)
+2015-10-10 23:07:35 1 [Warning] WSREP: Failed to report last committed 74637, -4 (Interrupted system call)
+2015-10-10 23:08:14 1 [Warning] WSREP: Failed to report last committed 74764, -4 (Interrupted system call)
+2015-10-10 23:09:44 1 [Warning] WSREP: Failed to report last committed 75022, -4 (Interrupted system call)
+2015-10-10 23:10:35 1 [Warning] WSREP: Failed to report last committed 75150, -4 (Interrupted system call)
+2015-10-10 23:11:15 1 [Warning] WSREP: Failed to report last committed 75280, -4 (Interrupted system call)
+2015-10-10 23:11:51 1 [Warning] WSREP: Failed to report last committed 75409, -4 (Interrupted system call)
+2015-10-10 23:13:39 1 [Warning] WSREP: Failed to report last committed 75760, -4 (Interrupted system call)
+2015-10-10 23:14:25 1 [Warning] WSREP: Failed to report last committed 75906, -4 (Interrupted system call)
+2015-10-10 23:15:18 1 [Warning] WSREP: Failed to report last committed 76065, -4 (Interrupted system call)
+2015-10-10 23:16:04 1 [Warning] WSREP: Failed to report last committed 76212, -4 (Interrupted system call)
