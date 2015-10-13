@@ -20,9 +20,9 @@ for line in file:
 file.close()
 
 f = open("diskio.csv", 'w')
-f.write("time,ip,pod,container,\n")
+f.write("time,ip,pod,container\n")
 for log in logs:
-    line = "%s,%s,%s,%s,\n" % (log.time, log.ip, log.pod, log.container)
+    line = "%s,%s,%s,%s\n" % (log.time, log.ip, log.pod, log.container)
     f.write(line)
 f.close()
 

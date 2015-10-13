@@ -61,14 +61,14 @@ if len(unknowFinishStatus) > 0:
 f.close()
 
 f1 = open('requester.sh.csv', 'w')
-f1.write("id,start_time,end_time,status(0: start 1:finished with cache hit 2: finish with warning),\n")
+f1.write("id,start_time,end_time,status(0: start 1:finished with cache hit 2: finish with warning)\n")
 dict = sorted(dict.iteritems(), key = lambda d: string.atoi(d[0]))
 for i in dict:
     id = i[0]
     req = i[1]
     if req.startTime == 0 or req.endTime == 0 or req.status == -1:
         continue
-    line = "%s,%s,%s,%s,\n" % (id, req.startTime, req.endTime, req.status)
+    line = "%s,%s,%s,%s\n" % (id, req.startTime, req.endTime, req.status)
     f1.write(line)
 f1.close()
 

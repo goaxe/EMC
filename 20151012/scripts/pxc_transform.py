@@ -28,9 +28,9 @@ for i in range(1, 4):
             continue
     file.close()
     f = open("pxc-node" + str(i) + ".csv", 'w')
-    f.write("time,levle,msg,\n")
+    f.write("time,levle,msg\n")
     for log in logs:
-        line = "%s,%s,%s,\n" % (log.timeStamp, log.level, log.msg[0: len(log.msg) - 1])
+        line = "%s,%s,\"%s\"\n" % (log.timeStamp, log.level, log.msg[0: len(log.msg) - 1])
         f.write(line)
     f.close()
 

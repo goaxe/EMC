@@ -39,8 +39,8 @@ for i in range(1, 4):
         logs.append(log)
     file.close()
     f = open("redis-master" + str(i) + ".csv", 'w')
-    f.write("start_time,end_time,mem_used,\n")
+    f.write("start_time,end_time,mem_used\n")
     for log in logs:
-        line = "%s,%s,%s,\n" % (log.startTime, log.endTime, log.memUsed)
+        line = "%s,%s,%s\n" % (log.startTime, log.endTime, log.memUsed)
         f.write(line)
     f.close()
