@@ -109,71 +109,289 @@
 
     <body id="demo">
     <script>
-//            .step(864e5)
-        var context = cubism.context()
-            .size(900)
-            .stop();
-        var context1 = cubism.context()
-//            .serverDelay(new Date(2012, 4, 2) - Date.now())
-//            .step(864e7)
-            .size(400)
+        var requestCxt = cubism.context()
+            .size(800)
             .stop();
 
+        var redisCxt1 = cubism.context()
+            .size(800)
+            .stop();
+        var redisCxt2 = cubism.context()
+            .size(800)
+            .stop();
+        var redisCxt3 = cubism.context()
+            .size(800)
+            .stop();
 
-        d3.select("#APPL")
-        .data(["AAPL"].map(stock))
+        var diskIOCxt1 = cubism.context()
+            .size(800)
+            .stop();
+        var diskIOCxt2 = cubism.context()
+            .size(800)
+            .stop();
+        var diskIOCxt3 = cubism.context()
+            .size(800)
+            .stop();
+
+        var warnCxt1 = cubism.context()
+            .size(800)
+            .stop();
+        var warnCxt2 = cubism.context()
+            .size(800)
+            .stop();
+        var warnCxt3 = cubism.context()
+            .size(800)
+            .stop();
+
+
+        var errorCxt1 = cubism.context()
+            .size(800)
+            .stop();
+        var errorCxt2 = cubism.context()
+            .size(800)
+            .stop();
+        var errorCxt3 = cubism.context()
+            .size(800)
+            .stop();
+
+
+
+
+
+        d3.select("#request")
+        .data(["request"].map(requestStock))
         .enter().insert("div", ".bottom")
         .attr("class", "horizon")
-        .call(context.horizon().title("testtitle").format(d3.format("+,.2p")));
+        .call(requestCxt.horizon().title("request").format(d3.format("+,.2p")));
 
-
-        
-
-        d3.select("#BIDU")
-        .data(["BIDU"].map(stock1))
+        d3.select("#redis1")
+        .data(["redis1"].map(redisStock1))
         .enter().insert("div", ".bottom")
         .attr("class", "horizon")
-        .call(context1.horizon()
+        .call(redisCxt1.horizon().title('redis1')
+        .format(d3.format("+,.2p")));
+        d3.select("#redis2")
+        .data(["redis2"].map(redisStock2))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(redisCxt2.horizon().title('redis2')
+        .format(d3.format("+,.2p")));
+        d3.select("#redis3")
+        .data(["redis3"].map(redisStock3))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(redisCxt3.horizon().title('redis3')
+        .format(d3.format("+,.2p")));
+
+        d3.select("#diskIO1")
+        .data(["diskIO1"].map(diskIOStock1))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(diskIOCxt1.horizon().title('diskIO1')
+        .format(d3.format("+,.2p")));
+        d3.select("#diskIO2")
+        .data(["diskIO2"].map(diskIOStock2))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(diskIOCxt2.horizon().title('diskIO2')
+        .format(d3.format("+,.2p")));
+        d3.select("#diskIO3")
+        .data(["diskIO3"].map(diskIOStock3))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(diskIOCxt3.horizon().title('diskIO3')
+        .format(d3.format("+,.2p")));
+
+        d3.select("#warn1")
+        .data(["warn1"].map(warnStock1))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(warnCxt1.horizon().title('warn1')
+        .format(d3.format("+,.2p")));
+        d3.select("#warn2")
+        .data(["warn2"].map(warnStock2))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(warnCxt2.horizon().title('warn2')
+        .format(d3.format("+,.2p")));
+        d3.select("#warn3")
+        .data(["warn3"].map(warnStock3))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(warnCxt3.horizon().title('warn3')
+        .format(d3.format("+,.2p")));
+
+        d3.select("#error1")
+        .data(["error1"].map(errorStock1))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(errorCxt1.horizon().title('error1')
+        .format(d3.format("+,.2p")));
+        d3.select("#error2")
+        .data(["error2"].map(errorStock2))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(errorCxt2.horizon().title('error2')
+        .format(d3.format("+,.2p")));
+        d3.select("#error3")
+        .data(["error3"].map(errorStock3))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(errorCxt3.horizon().title('error3')
         .format(d3.format("+,.2p")));
 
 
-        function stock() {
+        function requestStock() {
             var format = d3.time.format("%d-%b-%y");
-                return context.metric(function(start, stop, step, callback) {
-                        var values = {{ values }}
-                        console.log(values)
-                        console.log(start)
-                        console.log(stop)
-                        console.log(step)
-                        callback(null, values)
+                return requestCxt.metric(function(start, stop, step, callback) {
+                        var values = {{ requestData }}
+                        callback(null, values.slice(0, 800))
 
                 }, name);
         }
-        function stock1(name) {
+
+
+        function redisStock1() {
             var format = d3.time.format("%d-%b-%y");
-            var first = true
-                return context1.metric(function(start, stop, step, callback) {
-                        d3.csv("static/demo_csv/" + name + ".csv", function(rows) {
-                            rows = rows.map(function(d) { return [format.parse(d.Date), +d.Open]; }).filter(function(d) { return d[1]; });
-                            var date = rows[0][0], compare = rows[400][1], value = rows[0][1], values = [value];
-                            rows.forEach(function(d) {
-                                while ((date = d3.time.day.offset(date, 1)) < d[0]) {
-                                values.push(value);
-                                }
-//                                values.push(value = (d[1] - compare) / compare);
-                                values.push(d[1])
-                                });
-                            callback(null, values.slice(-context1.size()));
-                        });
+                return redisCxt1.metric(function(start, stop, step, callback) {
+                        var values = {{ redisData1 }}
+                        callback(null, values.slice(0, 800))
+
                 }, name);
         }
+        function redisStock2() {
+            var format = d3.time.format("%d-%b-%y");
+                return redisCxt2.metric(function(start, stop, step, callback) {
+                        var values = {{ redisData2 }}
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+        function redisStock3() {
+            var format = d3.time.format("%d-%b-%y");
+                return redisCxt3.metric(function(start, stop, step, callback) {
+                        var values = {{ redisData3 }}
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+
+        function diskIOStock1() {
+            var format = d3.time.format("%d-%b-%y");
+                return diskIOCxt1.metric(function(start, stop, step, callback) {
+                        var values = {{ diskIO1 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+        function diskIOStock2() {
+            var format = d3.time.format("%d-%b-%y");
+                return diskIOCxt2.metric(function(start, stop, step, callback) {
+                        var values = {{ diskIO2 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+        function diskIOStock3() {
+            var format = d3.time.format("%d-%b-%y");
+                return diskIOCxt3.metric(function(start, stop, step, callback) {
+                        var values = {{ diskIO3 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+
+
+        function warnStock1() {
+            var format = d3.time.format("%d-%b-%y");
+                return warnCxt1.metric(function(start, stop, step, callback) {
+                        var values = {{ warn1 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+        function warnStock2() {
+            var format = d3.time.format("%d-%b-%y");
+                return warnCxt2.metric(function(start, stop, step, callback) {
+                        var values = {{ warn2 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+        function warnStock3() {
+            var format = d3.time.format("%d-%b-%y");
+                return warnCxt3.metric(function(start, stop, step, callback) {
+                        var values = {{ warn3 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+
+
+        function errorStock1() {
+            var format = d3.time.format("%d-%b-%y");
+                return errorCxt1.metric(function(start, stop, step, callback) {
+                        var values = {{ error1 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+        function errorStock2() {
+            var format = d3.time.format("%d-%b-%y");
+                return errorCxt2.metric(function(start, stop, step, callback) {
+                        var values = {{ error2 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+        function errorStock3() {
+            var format = d3.time.format("%d-%b-%y");
+                return errorCxt3.metric(function(start, stop, step, callback) {
+                        var values = {{ error3 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 800))
+
+                }, name);
+        }
+
+
+
         </script>
 
-        <div id="AAPL" class="horizon">
+        <div id="request" class="horizon">
         </div>
-        <div id="BIDU" class="horizon">
-            <span class="title">BIDU</span>
-            <span class="value">+1,100%</span>
+        <div id="redis1" class="horizon">
         </div>
+        <div id="redis2" class="horizon">
+        </div>
+        <div id="redis3" class="horizon">
+        </div>
+        <div id="diskIO1" class="horizon">
+        </div>
+        <div id="diskIO2" class="horizon">
+        </div>
+        <div id="diskIO3" class="horizon">
+        </div>
+        <div id="warn1" class="horizon">
+        </div>
+        <div id="warn2" class="horizon">
+        </div>
+        <div id="warn3" class="horizon">
+        </div>
+        <div id="error1" class="horizon">
+        </div>
+        <div id="error2" class="horizon">
+        </div>
+        <div id="error3" class="horizon">
+        </div>
+
     </body>
 </html>

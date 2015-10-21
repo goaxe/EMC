@@ -67,7 +67,7 @@ def parseRedisData():
                     while (prevMin + 1) % 60 != m:
                         prevMin = (prevMin + 1) % 60
                         data.append(0)
-            mem = strs[2][0: len(strs[2]) - 3]
+            mem = int(strs[2][0: len(strs[2]) - 3])
             prevMin = (prevMin + 1) % 60
             while prevMin != m:
                 prevMin = (prevMin + 1) % 60
@@ -76,10 +76,10 @@ def parseRedisData():
         f.close()
         print('redis data len:', len(data))
         datas.append(data)
-#     for i in range(0, 3):
-        # for j in range(0, 20):
-            # print datas[i][j]
-        # print '============'
+    for i in range(0, 3):
+        for j in range(0, 200):
+            print datas[i][j]
+        print '============'
 
     return datas
 
@@ -123,6 +123,7 @@ def parseDiskIO():
     print('io in node1:', len(data[0]))
     print('io in node2:', len(data[1]))
     print('io in node3:', len(data[2]))
+    return data
 #     for i in range(0, 3):
         # for j in range(0, 20):
             # print(data[i][j])
@@ -160,7 +161,6 @@ def parseMySQLData():
                     if prevHour == 24:
                         prevHour = 0
             while prevMin != m or prevHour != h:
-                # prevMin = (prevMin + 1) % 60
                 prevMin = prevMin + 1
                 if  prevMin == 60:
                     prevMin = 0
@@ -182,19 +182,16 @@ def parseMySQLData():
         errorData.append(errors)
     for i in range(0, 3):
         print("mysql len:", len(warnData[i]), len(errorData[i]))
+    return warnData, errorData
 
 
 @app.route('/')
 def graphs():
-    parseRequestData()
-    parseRedisData()
-    parseDiskIO()
-    parseMySQLData()
-    values = []
-    for i in range(1, 10):
-        for j in range(1, 101):
-            values.append(j)
-    return render_template('layout.html', values=values)
+    requestData = parseRequestData()
+    redisDatas = parseRedisData()
+    ioDatas = parseDiskIO()
+    warnDatas, errorDatas= parseMySQLData()
+    return render_template('layout.html', requestData=requestData, redisData1=redisDatas[0], redisData2 = redisDatas[1], redisData3 = redisDatas[2], diskIO1=ioDatas[0], diskIO2=ioDatas[1], diskIO3=ioDatas[2], warn1=warnDatas[0], warn2=warnDatas[1], warn3=warnDatas[2], error1=errorDatas[0], error2=errorDatas[1], error3=errorDatas[2])
 
 
 
