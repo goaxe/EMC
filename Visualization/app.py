@@ -7,7 +7,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def graphs():
-    return render_template('layout.html')
+    values = []
+    for i in range(1, 10):
+        for j in range(1, 101):
+            values.append(j)
+    return render_template('layout.html', values=values)
 
 
 

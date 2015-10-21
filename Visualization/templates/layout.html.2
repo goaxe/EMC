@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- saved from url=(0055)http://bost.ocks.org/mike/cubism/intro/demo-stocks.html -->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -63,8 +64,8 @@
                 border-bottom: solid 1px #000;
                 overflow: hidden;
                 position: relative;
-                padding-left: 60px;
-                <!--padding-right:60px;-->
+                padding-left: 160px;
+                padding-right:60px;
             }
 
             .horizon {
@@ -109,50 +110,58 @@
 
     <body id="demo">
     <script>
-//            .step(864e5)
         var context = cubism.context()
-            .size(900)
+            .serverDelay(new Date(2012, 4, 2) - Date.now())
+            .step(864e5)
+            .size(1280)
             .stop();
         var context1 = cubism.context()
-//            .serverDelay(new Date(2012, 4, 2) - Date.now())
-//            .step(864e7)
-            .size(400)
+            .serverDelay(new Date(2012, 4, 2) - Date.now())
+            .step(864e5)
+            .size(280)
             .stop();
 
 
+/*                    d3.select("#demo").selectAll(".axis")
+        .data(["top", "bottom"])
+        .enter().append("div")
+        .attr("class", function(d) { return d + " axis"; })
+        .each(function(d) { d3.select(this).call(context.axis().ticks(12).orient(d)); });
+
+*/
+/*        d3.select("body").append("div")
+        .attr("class", "rule")
+        .call(context.rule());
+    */
+
+
+//        d3.select("body").selectAll(".horizon")
         d3.select("#APPL")
         .data(["AAPL"].map(stock))
         .enter().insert("div", ".bottom")
         .attr("class", "horizon")
-        .call(context.horizon().title("testtitle").format(d3.format("+,.2p")));
-
-
-        
-
-        d3.select("#BIDU")
-        .data(["BIDU"].map(stock1))
-        .enter().insert("div", ".bottom")
-        .attr("class", "horizon")
-        .call(context1.horizon()
+        .call(context.horizon()
         .format(d3.format("+,.2p")));
 
+        d3.select("#BIDU")
+        .data(["BIDU"].map(stock))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(context.horizon()
+        .format(d3.format("+,.2p")));
+       
+        
 
-        function stock() {
-            var format = d3.time.format("%d-%b-%y");
-                return context.metric(function(start, stop, step, callback) {
-                        var values = {{ values }}
-                        console.log(values)
-                        console.log(start)
-                        console.log(stop)
-                        console.log(step)
-                        callback(null, values)
+/*        context.on("focus", function(i) {
+                d3.selectAll(".value").style("right", i == null ? null : context.size() - i + "px");
+                });
+*/
 
-                }, name);
-        }
-        function stock1(name) {
+        var first = true
+        function stock(name) {
             var format = d3.time.format("%d-%b-%y");
             var first = true
-                return context1.metric(function(start, stop, step, callback) {
+                return context.metric(function(start, stop, step, callback) {
                         d3.csv("static/demo_csv/" + name + ".csv", function(rows) {
                             rows = rows.map(function(d) { return [format.parse(d.Date), +d.Open]; }).filter(function(d) { return d[1]; });
                             var date = rows[0][0], compare = rows[400][1], value = rows[0][1], values = [value];
@@ -163,17 +172,30 @@
 //                                values.push(value = (d[1] - compare) / compare);
                                 values.push(d[1])
                                 });
-                            callback(null, values.slice(-context1.size()));
+                            if (first == true) {
+                                first = false;
+                                } else {
+//                                    content.size(400);
+                                }
+                            
+                            callback(null, values.slice(-context.size()));
                         });
                 }, name);
         }
         </script>
 
         <div id="AAPL" class="horizon">
+            <span class="title">AAPL</span>
+            <span class="value">+590%</span>
         </div>
         <div id="BIDU" class="horizon">
             <span class="title">BIDU</span>
             <span class="value">+1,100%</span>
         </div>
+<!--        <div class="rule">-->
+            <!--<div class="line" style="position: absolute; top: 0px; bottom: 0px; width: 1px; pointer-events: none; display: none;">-->
+            <!--</div>-->
+        <!--</div>-->
+
     </body>
 </html>
