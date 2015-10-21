@@ -1,0 +1,477 @@
+Running mysql_install_db ...
+2015-10-19 13:25:09 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+2015-10-19 13:25:09 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-10-19 13:25:09 0 [Note] /usr/sbin/mysqld (mysqld 5.6.24-72.2-56) starting as process 16 ...
+2015-10-19 13:25:09 16 [Note] WSREP: Read nil XID from storage engines, skipping position init
+2015-10-19 13:25:09 16 [Note] WSREP: wsrep_load(): loading provider library 'none'
+2015-10-19 13:25:09 16 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-10-19 13:25:09 16 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-10-19 13:25:09 16 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-10-19 13:25:09 16 [Note] InnoDB: Memory barrier is not used
+2015-10-19 13:25:09 16 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2015-10-19 13:25:09 16 [Note] InnoDB: Using Linux native AIO
+2015-10-19 13:25:09 16 [Note] InnoDB: Using CPU crc32 instructions
+2015-10-19 13:25:09 16 [Note] InnoDB: Initializing buffer pool, size = 20.0M
+2015-10-19 13:25:09 16 [Note] InnoDB: Completed initialization of buffer pool
+2015-10-19 13:25:09 16 [Note] InnoDB: The first specified data file ./ibdata1 did not exist: a new database to be created!
+2015-10-19 13:25:09 16 [Note] InnoDB: Setting file ./ibdata1 size to 12 MB
+2015-10-19 13:25:09 16 [Note] InnoDB: Database physically writes the file full: wait...
+2015-10-19 13:25:10 16 [Note] InnoDB: Setting log file ./ib_logfile101 size to 100 MB
+InnoDB: Progress in MB: 100
+2015-10-19 13:25:11 16 [Note] InnoDB: Setting log file ./ib_logfile1 size to 100 MB
+InnoDB: Progress in MB: 100
+2015-10-19 13:25:13 16 [Note] InnoDB: Renaming log file ./ib_logfile101 to ./ib_logfile0
+2015-10-19 13:25:13 16 [Warning] InnoDB: New log files created, LSN=45781
+2015-10-19 13:25:13 16 [Note] InnoDB: Doublewrite buffer not found: creating new
+2015-10-19 13:25:14 16 [Note] InnoDB: Doublewrite buffer created
+2015-10-19 13:25:14 16 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-10-19 13:25:14 16 [Warning] InnoDB: Creating foreign key constraint system tables.
+2015-10-19 13:25:14 16 [Note] InnoDB: Foreign key constraint system tables created
+2015-10-19 13:25:14 16 [Note] InnoDB: Creating tablespace and datafile system tables.
+2015-10-19 13:25:14 16 [Note] InnoDB: Tablespace and datafile system tables created.
+2015-10-19 13:25:14 16 [Note] InnoDB: Waiting for purge to start
+2015-10-19 13:25:14 16 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.24-72.2 started; log sequence number 0
+2015-10-19 13:25:14 16 [Note] RSA private key file not found: /var/lib/mysql//private_key.pem. Some authentication plugins will not work.
+2015-10-19 13:25:14 16 [Note] RSA public key file not found: /var/lib/mysql//public_key.pem. Some authentication plugins will not work.
+2015-10-19 13:25:25 16 [Note] WSREP: Service disconnected.
+2015-10-19 13:25:26 16 [Note] WSREP: Some threads may fail to exit.
+2015-10-19 13:25:26 16 [Note] Binlog end
+2015-10-19 13:25:26 16 [Note] InnoDB: FTS optimize thread exiting.
+2015-10-19 13:25:26 16 [Note] InnoDB: Starting shutdown...
+2015-10-19 13:25:28 16 [Note] InnoDB: Shutdown completed; log sequence number 1625977
+Installing MySQL system tables...OK
+
+2015-10-19 13:25:28 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+2015-10-19 13:25:28 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-10-19 13:25:28 0 [Note] /usr/sbin/mysqld (mysqld 5.6.24-72.2-56) starting as process 41 ...
+2015-10-19 13:25:28 41 [Note] WSREP: Read nil XID from storage engines, skipping position init
+2015-10-19 13:25:28 41 [Note] WSREP: wsrep_load(): loading provider library 'none'
+2015-10-19 13:25:28 41 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-10-19 13:25:28 41 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-10-19 13:25:28 41 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-10-19 13:25:28 41 [Note] InnoDB: Memory barrier is not used
+2015-10-19 13:25:28 41 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2015-10-19 13:25:28 41 [Note] InnoDB: Using Linux native AIO
+2015-10-19 13:25:28 41 [Note] InnoDB: Using CPU crc32 instructions
+2015-10-19 13:25:28 41 [Note] InnoDB: Initializing buffer pool, size = 20.0M
+2015-10-19 13:25:28 41 [Note] InnoDB: Completed initialization of buffer pool
+2015-10-19 13:25:28 41 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-10-19 13:25:28 41 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-10-19 13:25:28 41 [Note] InnoDB: Waiting for purge to start
+2015-10-19 13:25:28 41 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.24-72.2 started; log sequence number 1625977
+2015-10-19 13:25:28 41 [Note] RSA private key file not found: /var/lib/mysql//private_key.pem. Some authentication plugins will not work.
+2015-10-19 13:25:28 41 [Note] RSA public key file not found: /var/lib/mysql//public_key.pem. Some authentication plugins will not work.
+2015-10-19 13:25:28 41 [Note] WSREP: Service disconnected.
+2015-10-19 13:25:29 41 [Note] WSREP: Some threads may fail to exit.
+2015-10-19 13:25:29 41 [Note] Binlog end
+2015-10-19 13:25:29 41 [Note] InnoDB: FTS optimize thread exiting.
+2015-10-19 13:25:29 41 [Note] InnoDB: Starting shutdown...
+2015-10-19 13:25:31 41 [Note] InnoDB: Shutdown completed; log sequence number 1625987
+Filling help tables...OK
+
+To start mysqld at boot time you have to copy
+support-files/mysql.server to the right place for your system
+
+PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+To do so, start the server, then issue the following commands:
+
+  /usr/bin/mysqladmin -u root password 'new-password'
+  /usr/bin/mysqladmin -u root -h pxc-node2 password 'new-password'
+
+Alternatively you can run:
+
+  /usr/bin/mysql_secure_installation
+
+which will also give you the option of removing the test
+databases and anonymous user created by default.  This is
+strongly recommended for production servers.
+
+See the manual for more instructions.
+
+You can start the MySQL daemon with:
+
+  cd /usr ; /usr/bin/mysqld_safe &
+
+You can test the MySQL daemon with mysql-test-run.pl
+
+  cd mysql-test ; perl mysql-test-run.pl
+
+Please report any problems with Percona XtraDB Cluster 5.6 at https://bugs.launchpad.net/percona-xtradb-cluster/+filebug
+
+The latest information about Percona XtraDB Cluster 5.6 is available on the web at
+
+  http://www.percona.com/doc/percona-xtradb-cluster/5.6/
+
+Support Percona XtraDB Cluster 5.6 by buying support at http://www.percona.com/products/mysql-support
+
+WARNING: Default config file /etc/mysql/my.cnf exists on the system
+This file will be read by default by the MySQL server
+If you do not want to use this, either remove it, or use the
+--defaults-file argument to mysqld_safe when starting the server
+
+Finished mysql_install_db
+2015-10-19 13:25:32 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+2015-10-19 13:25:32 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-10-19 13:25:32 0 [Note] mysqld (mysqld 5.6.24-72.2-56) starting as process 1 ...
+2015-10-19 13:25:32 1 [Note] WSREP: Read nil XID from storage engines, skipping position init
+2015-10-19 13:25:32 1 [Note] WSREP: wsrep_load(): loading provider library '/usr/lib/libgalera_smm.so'
+2015-10-19 13:25:32 1 [Note] WSREP: wsrep_load(): Galera 3.11(r93aca2d) by Codership Oy <info@codership.com> loaded successfully.
+2015-10-19 13:25:32 1 [Note] WSREP: CRC-32C: using hardware acceleration.
+2015-10-19 13:25:32 1 [Warning] WSREP: Could not open state file for reading: '/var/lib/mysql//grastate.dat'
+2015-10-19 13:25:32 1 [Note] WSREP: Found saved state: 00000000-0000-0000-0000-000000000000:-1
+2015-10-19 13:25:32 1 [Note] WSREP: Passing config to GCS: base_dir = /var/lib/mysql/; base_host = 172.17.53.13; base_port = 4567; cert.log_conflicts = no; debug = no; evs.auto_evict = 0; evs.delay_margin = PT1S; evs.delayed_keep_period = PT30S; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /var/lib/mysql/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = /var/lib/mysql//galera.cache; gcache.page_size = 128M; gcache.size = 128M; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.segment = 0; gmcast.version = 0; pc.announce_timeout = PT3S; pc.checksum = false; pc.ignore_quorum = false; pc.ignore_sb = false;
+2015-10-19 13:25:32 1 [Note] WSREP: Service thread queue flushed.
+2015-10-19 13:25:32 1 [Note] WSREP: Assign initial position for certification: -1, protocol version: -1
+2015-10-19 13:25:32 1 [Note] WSREP: wsrep_sst_grab()
+2015-10-19 13:25:32 1 [Note] WSREP: Start replication
+2015-10-19 13:25:32 1 [Note] WSREP: Setting initial position to 00000000-0000-0000-0000-000000000000:-1
+2015-10-19 13:25:32 1 [Note] WSREP: protonet asio version 0
+2015-10-19 13:25:32 1 [Note] WSREP: Using CRC-32C for message checksums.
+2015-10-19 13:25:32 1 [Note] WSREP: backend: asio
+2015-10-19 13:25:32 1 [Warning] WSREP: access file(/var/lib/mysql//gvwstate.dat) failed(No such file or directory)
+2015-10-19 13:25:32 1 [Note] WSREP: restore pc from disk failed
+2015-10-19 13:25:32 1 [Note] WSREP: GMCast version 0
+2015-10-19 13:25:32 1 [Note] WSREP: (dfaa40ed, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+2015-10-19 13:25:32 1 [Note] WSREP: (dfaa40ed, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+2015-10-19 13:25:32 1 [Note] WSREP: EVS version 0
+2015-10-19 13:25:32 1 [Note] WSREP: gcomm: connecting to group 'galera_kubernetes', peer '10.254.157.199:,,10.254.101.159:'
+2015-10-19 13:25:32 1 [Note] WSREP: (dfaa40ed, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+2015-10-19 13:25:32 1 [Note] WSREP: declaring bb8ba5e1 at tcp://10.254.157.199:4567 stable
+2015-10-19 13:25:32 1 [Note] WSREP: declaring de5bd915 at tcp://10.254.101.159:4567 stable
+2015-10-19 13:25:33 1 [Note] WSREP: Node bb8ba5e1 state prim
+2015-10-19 13:25:33 1 [Note] WSREP: view(view_id(PRIM,bb8ba5e1,3) memb {
+	bb8ba5e1,0
+	de5bd915,0
+	dfaa40ed,0
+} joined {
+} left {
+} partitioned {
+})
+2015-10-19 13:25:33 1 [Note] WSREP: save pc into disk
+2015-10-19 13:25:34 1 [Note] WSREP: gcomm: connected
+2015-10-19 13:25:34 1 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+2015-10-19 13:25:34 1 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+2015-10-19 13:25:34 1 [Note] WSREP: Opened channel 'galera_kubernetes'
+2015-10-19 13:25:34 1 [Note] WSREP: Waiting for SST to complete.
+2015-10-19 13:25:34 1 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 2, memb_num = 3
+2015-10-19 13:25:34 1 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+2015-10-19 13:25:34 1 [Note] WSREP: STATE EXCHANGE: sent state msg: e074a2d0-7664-11e5-857f-ca494d37b78f
+2015-10-19 13:25:34 1 [Note] WSREP: STATE EXCHANGE: got state msg: e074a2d0-7664-11e5-857f-ca494d37b78f from 0 (pxc-node1)
+2015-10-19 13:25:34 1 [Note] WSREP: STATE EXCHANGE: got state msg: e074a2d0-7664-11e5-857f-ca494d37b78f from 1 (pxc-node3)
+2015-10-19 13:25:34 1 [Note] WSREP: STATE EXCHANGE: got state msg: e074a2d0-7664-11e5-857f-ca494d37b78f from 2 (pxc-node2)
+2015-10-19 13:25:34 1 [Note] WSREP: Quorum results:
+	version    = 3,
+	component  = PRIMARY,
+	conf_id    = 2,
+	members    = 1/3 (joined/total),
+	act_id     = 0,
+	last_appl. = -1,
+	protocols  = 0/7/3 (gcs/repl/appl),
+	group UUID = bb8c2440-7664-11e5-afb9-6b14a7b805ea
+2015-10-19 13:25:34 1 [Note] WSREP: Flow-control interval: [28, 28]
+2015-10-19 13:25:34 1 [Note] WSREP: Shifting OPEN -> PRIMARY (TO: 0)
+2015-10-19 13:25:34 1 [Note] WSREP: State transfer required: 
+	Group state: bb8c2440-7664-11e5-afb9-6b14a7b805ea:0
+	Local state: 00000000-0000-0000-0000-000000000000:-1
+2015-10-19 13:25:34 1 [Note] WSREP: New cluster view: global state: bb8c2440-7664-11e5-afb9-6b14a7b805ea:0, view# 3: Primary, number of nodes: 3, my index: 2, protocol version 3
+2015-10-19 13:25:34 1 [Warning] WSREP: Gap in state sequence. Need state transfer.
+2015-10-19 13:25:34 1 [Note] WSREP: Running: 'wsrep_sst_xtrabackup-v2 --role 'joiner' --address '172.17.53.13' --auth 'sst:sst' --datadir '/var/lib/mysql/' --defaults-file '/etc/mysql/my.cnf' --defaults-group-suffix '' --parent '1'  '' '
+2015-10-19 13:25:34 1 [Note] WSREP: Member 1.0 (pxc-node3) requested state transfer from '*any*'. Selected 0.0 (pxc-node1)(SYNCED) as donor.
+WSREP_SST: [INFO] Streaming with xbstream (20151019 13:25:35.122)
+WSREP_SST: [INFO] Using socat as streamer (20151019 13:25:35.125)
+WSREP_SST: [INFO] Evaluating timeout -k 110 100 socat -u TCP-LISTEN:4444,reuseaddr stdio | xbstream -x; RC=( ${PIPESTATUS[@]} ) (20151019 13:25:35.225)
+2015-10-19 13:25:35 1 [Note] WSREP: Prepared SST request: xtrabackup-v2|172.17.53.13:4444/xtrabackup_sst//1
+2015-10-19 13:25:35 1 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2015-10-19 13:25:35 1 [Note] WSREP: REPL Protocols: 7 (3, 2)
+2015-10-19 13:25:35 1 [Note] WSREP: Service thread queue flushed.
+2015-10-19 13:25:35 1 [Note] WSREP: Assign initial position for certification: 0, protocol version: 3
+2015-10-19 13:25:35 1 [Note] WSREP: Service thread queue flushed.
+2015-10-19 13:25:35 1 [Warning] WSREP: Failed to prepare for incremental state transfer: Local state UUID (00000000-0000-0000-0000-000000000000) does not match group state UUID (bb8c2440-7664-11e5-afb9-6b14a7b805ea): 1 (Operation not permitted)
+	 at galera/src/replicator_str.cpp:prepare_for_IST():463. IST will be unavailable.
+2015-10-19 13:25:35 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:35 1 [Note] WSREP: Requesting state transfer failed: -11(Resource temporarily unavailable). Will keep retrying every 1 second(s)
+2015-10-19 13:25:36 1 [Note] WSREP: (dfaa40ed, 'tcp://0.0.0.0:4567') turning message relay requesting off
+2015-10-19 13:25:36 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:37 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:38 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:39 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:40 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:41 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:42 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:43 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:44 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:45 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:46 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:47 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:48 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:49 1 [Warning] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*', but it is impossible to select State Transfer donor: Resource temporarily unavailable
+2015-10-19 13:25:49 1 [Note] WSREP: 0.0 (pxc-node1): State transfer to 1.0 (pxc-node3) complete.
+2015-10-19 13:25:49 1 [Note] WSREP: Member 0.0 (pxc-node1) synced with group.
+2015-10-19 13:25:50 1 [Note] WSREP: Member 2.0 (pxc-node2) requested state transfer from '*any*'. Selected 0.0 (pxc-node1)(SYNCED) as donor.
+2015-10-19 13:25:50 1 [Note] WSREP: Shifting PRIMARY -> JOINER (TO: 0)
+2015-10-19 13:25:50 1 [Note] WSREP: Requesting state transfer: success after 16 tries, donor: 0
+WSREP_SST: [INFO] Evaluating socat -u TCP-LISTEN:4444,reuseaddr stdio | xbstream -x; RC=( ${PIPESTATUS[@]} ) (20151019 13:25:51.940)
+WSREP_SST: [INFO] Proceeding with SST (20151019 13:25:51.940)
+WSREP_SST: [INFO] Cleaning the existing datadir and innodb-data/log directories (20151019 13:25:51.943)
+removed '/var/lib/mysql/performance_schema/socket_instances.frm'
+removed '/var/lib/mysql/performance_schema/setup_instruments.frm'
+removed '/var/lib/mysql/performance_schema/table_io_waits_summary_by_index_usage.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_history.frm'
+removed '/var/lib/mysql/performance_schema/performance_timers.frm'
+removed '/var/lib/mysql/performance_schema/file_instances.frm'
+removed '/var/lib/mysql/performance_schema/cond_instances.frm'
+removed '/var/lib/mysql/performance_schema/accounts.frm'
+removed '/var/lib/mysql/performance_schema/rwlock_instances.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_history_long.frm'
+removed '/var/lib/mysql/performance_schema/setup_consumers.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_host_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/socket_summary_by_instance.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_history_long.frm'
+removed '/var/lib/mysql/performance_schema/objects_summary_global_by_type.frm'
+removed '/var/lib/mysql/performance_schema/setup_objects.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_history_long.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_current.frm'
+removed '/var/lib/mysql/performance_schema/session_account_connect_attrs.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_current.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_by_host_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/hosts.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_thread_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_thread_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/session_connect_attrs.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_host_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/file_summary_by_instance.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_by_user_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_user_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/table_io_waits_summary_by_table.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_global_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/socket_summary_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_account_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_account_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_history.frm'
+removed '/var/lib/mysql/performance_schema/table_lock_waits_summary_by_table.frm'
+removed '/var/lib/mysql/performance_schema/host_cache.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_global_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/threads.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_by_account_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_current.frm'
+removed '/var/lib/mysql/performance_schema/mutex_instances.frm'
+removed '/var/lib/mysql/performance_schema/users.frm'
+removed '/var/lib/mysql/performance_schema/events_statements_summary_by_digest.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_user_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_by_instance.frm'
+removed '/var/lib/mysql/performance_schema/db.opt'
+removed '/var/lib/mysql/performance_schema/events_waits_summary_global_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_history.frm'
+removed '/var/lib/mysql/performance_schema/setup_timers.frm'
+removed '/var/lib/mysql/performance_schema/setup_actors.frm'
+removed '/var/lib/mysql/performance_schema/file_summary_by_event_name.frm'
+removed '/var/lib/mysql/performance_schema/events_stages_summary_by_thread_by_event_name.frm'
+removed directory: '/var/lib/mysql/performance_schema'
+removed '/var/lib/mysql/ib_logfile0'
+removed '/var/lib/mysql/mysql/func.frm'
+removed '/var/lib/mysql/mysql/slow_log.CSM'
+removed '/var/lib/mysql/mysql/help_topic.MYD'
+removed '/var/lib/mysql/mysql/slave_relay_log_info.ibd'
+removed '/var/lib/mysql/mysql/procs_priv.MYI'
+removed '/var/lib/mysql/mysql/help_topic.MYI'
+removed '/var/lib/mysql/mysql/time_zone.MYI'
+removed '/var/lib/mysql/mysql/time_zone_name.MYD'
+removed '/var/lib/mysql/mysql/time_zone.MYD'
+removed '/var/lib/mysql/mysql/tables_priv.frm'
+removed '/var/lib/mysql/mysql/servers.MYI'
+removed '/var/lib/mysql/mysql/proxies_priv.frm'
+removed '/var/lib/mysql/mysql/columns_priv.MYI'
+removed '/var/lib/mysql/mysql/help_category.MYD'
+removed '/var/lib/mysql/mysql/user.MYI'
+removed '/var/lib/mysql/mysql/columns_priv.MYD'
+removed '/var/lib/mysql/mysql/time_zone.frm'
+removed '/var/lib/mysql/mysql/time_zone_leap_second.frm'
+removed '/var/lib/mysql/mysql/user.MYD'
+removed '/var/lib/mysql/mysql/help_keyword.frm'
+removed '/var/lib/mysql/mysql/servers.frm'
+removed '/var/lib/mysql/mysql/time_zone_leap_second.MYD'
+removed '/var/lib/mysql/mysql/servers.MYD'
+removed '/var/lib/mysql/mysql/procs_priv.frm'
+removed '/var/lib/mysql/mysql/time_zone_transition.MYD'
+removed '/var/lib/mysql/mysql/slave_master_info.ibd'
+removed '/var/lib/mysql/mysql/user.frm'
+removed '/var/lib/mysql/mysql/db.frm'
+removed '/var/lib/mysql/mysql/slave_master_info.frm'
+removed '/var/lib/mysql/mysql/plugin.MYI'
+removed '/var/lib/mysql/mysql/innodb_index_stats.frm'
+removed '/var/lib/mysql/mysql/general_log.frm'
+removed '/var/lib/mysql/mysql/help_keyword.MYD'
+removed '/var/lib/mysql/mysql/help_keyword.MYI'
+removed '/var/lib/mysql/mysql/innodb_index_stats.ibd'
+removed '/var/lib/mysql/mysql/innodb_table_stats.ibd'
+removed '/var/lib/mysql/mysql/general_log.CSV'
+removed '/var/lib/mysql/mysql/help_relation.MYD'
+removed '/var/lib/mysql/mysql/slave_worker_info.frm'
+removed '/var/lib/mysql/mysql/plugin.frm'
+removed '/var/lib/mysql/mysql/help_relation.MYI'
+removed '/var/lib/mysql/mysql/innodb_table_stats.frm'
+removed '/var/lib/mysql/mysql/time_zone_transition.frm'
+removed '/var/lib/mysql/mysql/slave_relay_log_info.frm'
+removed '/var/lib/mysql/mysql/event.frm'
+removed '/var/lib/mysql/mysql/help_topic.frm'
+removed '/var/lib/mysql/mysql/slow_log.frm'
+removed '/var/lib/mysql/mysql/time_zone_transition_type.MYD'
+removed '/var/lib/mysql/mysql/func.MYD'
+removed '/var/lib/mysql/mysql/ndb_binlog_index.frm'
+removed '/var/lib/mysql/mysql/time_zone_transition_type.frm'
+removed '/var/lib/mysql/mysql/procs_priv.MYD'
+removed '/var/lib/mysql/mysql/time_zone_name.frm'
+removed '/var/lib/mysql/mysql/ndb_binlog_index.MYD'
+removed '/var/lib/mysql/mysql/general_log.CSM'
+removed '/var/lib/mysql/mysql/db.MYD'
+removed '/var/lib/mysql/mysql/proxies_priv.MYI'
+removed '/var/lib/mysql/mysql/event.MYD'
+removed '/var/lib/mysql/mysql/db.MYI'
+removed '/var/lib/mysql/mysql/ndb_binlog_index.MYI'
+removed '/var/lib/mysql/mysql/help_category.frm'
+removed '/var/lib/mysql/mysql/help_relation.frm'
+removed '/var/lib/mysql/mysql/proxies_priv.MYD'
+removed '/var/lib/mysql/mysql/func.MYI'
+removed '/var/lib/mysql/mysql/proc.frm'
+removed '/var/lib/mysql/mysql/plugin.MYD'
+removed '/var/lib/mysql/mysql/proc.MYD'
+removed '/var/lib/mysql/mysql/time_zone_transition.MYI'
+removed '/var/lib/mysql/mysql/proc.MYI'
+removed '/var/lib/mysql/mysql/help_category.MYI'
+removed '/var/lib/mysql/mysql/event.MYI'
+removed '/var/lib/mysql/mysql/slave_worker_info.ibd'
+removed '/var/lib/mysql/mysql/time_zone_leap_second.MYI'
+removed '/var/lib/mysql/mysql/tables_priv.MYD'
+removed '/var/lib/mysql/mysql/time_zone_name.MYI'
+removed '/var/lib/mysql/mysql/slow_log.CSV'
+removed '/var/lib/mysql/mysql/tables_priv.MYI'
+removed '/var/lib/mysql/mysql/columns_priv.frm'
+removed '/var/lib/mysql/mysql/time_zone_transition_type.MYI'
+removed directory: '/var/lib/mysql/mysql'
+removed directory: '/var/lib/mysql/lost+found'
+removed '/var/lib/mysql/ib_logfile1'
+removed directory: '/var/lib/mysql/test'
+removed '/var/lib/mysql/ibdata1'
+WSREP_SST: [INFO] Waiting for SST streaming to complete! (20151019 13:25:52.015)
+2015-10-19 13:26:03 1 [Note] WSREP: 1.0 (pxc-node3): State transfer from 0.0 (pxc-node1) complete.
+2015-10-19 13:26:03 1 [Note] WSREP: Member 1.0 (pxc-node3) synced with group.
+2015-10-19 13:26:05 1 [Note] WSREP: 0.0 (pxc-node1): State transfer to 2.0 (pxc-node2) complete.
+2015-10-19 13:26:05 1 [Note] WSREP: Member 0.0 (pxc-node1) synced with group.
+WSREP_SST: [INFO] Preparing the backup at /var/lib/mysql//.sst (20151019 13:26:11.623)
+WSREP_SST: [INFO] Evaluating innobackupex --no-version-check  --apply-log $rebuildcmd ${DATA} &>${DATA}/innobackup.prepare.log (20151019 13:26:11.625)
+rm: cannot remove '/var/lib/mysql//innobackup.prepare.log': No such file or directory
+rm: cannot remove '/var/lib/mysql//innobackup.move.log': No such file or directory
+WSREP_SST: [INFO] Moving the backup to /var/lib/mysql/ (20151019 13:26:19.330)
+WSREP_SST: [INFO] Evaluating innobackupex --defaults-file=/etc/mysql/my.cnf  --defaults-group=mysqld --no-version-check   --move-back --force-non-empty-directories ${DATA} &>${DATA}/innobackup.move.log (20151019 13:26:19.333)
+WSREP_SST: [INFO] Move successful, removing /var/lib/mysql//.sst (20151019 13:26:19.565)
+WSREP_SST: [INFO] Galera co-ords from recovery: bb8c2440-7664-11e5-afb9-6b14a7b805ea:2 (20151019 13:26:19.573)
+WSREP_SST: [INFO] Total time on joiner: 0 seconds (20151019 13:26:19.578)
+WSREP_SST: [INFO] Removing the sst_in_progress file (20151019 13:26:19.581)
+2015-10-19 13:26:19 1 [Note] WSREP: SST complete, seqno: 2
+2015-10-19 13:26:19 1 [Warning] Using unique option prefix myisam-recover instead of myisam-recover-options is deprecated and will be removed in a future release. Please use the full name instead.
+2015-10-19 13:26:19 1 [Note] Plugin 'FEDERATED' is disabled.
+2015-10-19 13:26:19 1 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-10-19 13:26:19 1 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-10-19 13:26:19 1 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-10-19 13:26:19 1 [Note] InnoDB: Memory barrier is not used
+2015-10-19 13:26:19 1 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2015-10-19 13:26:19 1 [Note] InnoDB: Using Linux native AIO
+2015-10-19 13:26:19 1 [Note] InnoDB: Using CPU crc32 instructions
+2015-10-19 13:26:19 1 [Note] InnoDB: Initializing buffer pool, size = 20.0M
+2015-10-19 13:26:19 1 [Note] InnoDB: Completed initialization of buffer pool
+2015-10-19 13:26:19 1 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-10-19 13:26:19 1 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-10-19 13:26:19 1 [Note] InnoDB: Waiting for purge to start
+2015-10-19 13:26:19 1 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.24-72.2 started; log sequence number 1634838
+2015-10-19 13:26:19 1 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: fbc283ba-7664-11e5-890b-0242ac11350d.
+2015-10-19 13:26:19 1 [Note] RSA private key file not found: /var/lib/mysql//private_key.pem. Some authentication plugins will not work.
+2015-10-19 13:26:19 1 [Note] RSA public key file not found: /var/lib/mysql//public_key.pem. Some authentication plugins will not work.
+2015-10-19 13:26:19 1 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-10-19 13:26:19 1 [Note] IPv6 is available.
+2015-10-19 13:26:19 1 [Note]   - '::' resolves to '::';
+2015-10-19 13:26:19 1 [Note] Server socket created on IP: '::'.
+2015-10-19 13:26:19 1 [ERROR] mysqld: Table './mysql/user' is marked as crashed and should be repaired
+2015-10-19 13:26:19 1 [Warning] Checking table:   './mysql/user'
+2015-10-19 13:26:19 1 [ERROR] 1 client is using or hasn't closed the table properly
+2015-10-19 13:26:19 1 [Note] Event Scheduler: Loaded 0 events
+2015-10-19 13:26:19 1 [Note] WSREP: Signalling provider to continue.
+2015-10-19 13:26:19 1 [Note] WSREP: Initialized wsrep sidno 1
+2015-10-19 13:26:19 1 [Note] WSREP: SST received: bb8c2440-7664-11e5-afb9-6b14a7b805ea:2
+2015-10-19 13:26:19 1 [Note] Execution of init_file '/tmp/mysql-first-time.sql' started.
+ERROR: 1396  Operation CREATE USER failed for 'root'@'%'
+2015-10-19 13:26:19 1 [Note] Execution of init_file '/tmp/mysql-first-time.sql' ended.
+2015-10-19 13:26:19 1 [Note] mysqld: ready for connections.
+Version: '5.6.24-72.2-56'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  Percona XtraDB Cluster (GPL), Release rel72.2, Revision 43abf03, WSREP version 25.11, wsrep_25.11
+2015-10-19 13:26:19 1 [Note] WSREP: 2.0 (pxc-node2): State transfer from 0.0 (pxc-node1) complete.
+2015-10-19 13:26:19 1 [Note] WSREP: Shifting JOINER -> JOINED (TO: 2)
+2015-10-19 13:26:19 1 [Note] WSREP: Member 2.0 (pxc-node2) synced with group.
+2015-10-19 13:26:19 1 [Note] WSREP: Shifting JOINED -> SYNCED (TO: 2)
+2015-10-19 13:26:19 1 [Note] WSREP: Synchronized with group, ready for connections
+2015-10-19 13:26:19 1 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2015-10-19 13:46:03 1 [Warning] WSREP: Failed to report last committed 1610, -4 (Interrupted system call)
+2015-10-19 13:57:31 1 [Warning] WSREP: Failed to report last committed 3878, -4 (Interrupted system call)
+2015-10-19 13:59:28 1 [Warning] WSREP: Failed to report last committed 4251, -4 (Interrupted system call)
+2015-10-19 14:14:04 1 [Warning] WSREP: Failed to report last committed 7164, -4 (Interrupted system call)
+2015-10-19 14:17:31 1 [Warning] WSREP: Failed to report last committed 7872, -4 (Interrupted system call)
+2015-10-19 14:21:25 1 [Warning] WSREP: Failed to report last committed 8630, -4 (Interrupted system call)
+2015-10-19 15:11:56 1 [Warning] WSREP: Failed to report last committed 18462, -4 (Interrupted system call)
+2015-10-19 15:12:34 1 [Warning] WSREP: Failed to report last committed 18569, -4 (Interrupted system call)
+2015-10-19 16:36:37 1 [Warning] WSREP: Failed to report last committed 34559, -4 (Interrupted system call)
+2015-10-19 16:51:59 1 [Warning] WSREP: Failed to report last committed 37564, -4 (Interrupted system call)
+2015-10-19 17:11:35 1 [Warning] WSREP: Failed to report last committed 41228, -4 (Interrupted system call)
+2015-10-19 17:12:16 1 [Warning] WSREP: Failed to report last committed 41342, -4 (Interrupted system call)
+2015-10-19 17:12:52 1 [Warning] WSREP: Failed to report last committed 41447, -4 (Interrupted system call)
+2015-10-19 17:13:04 1 [Warning] WSREP: Failed to report last committed 41479, -4 (Interrupted system call)
+2015-10-19 17:41:48 1 [Warning] WSREP: Failed to report last committed 46424, -4 (Interrupted system call)
+2015-10-19 17:43:55 1 [Warning] WSREP: Failed to report last committed 46789, -4 (Interrupted system call)
+2015-10-19 17:45:28 1 [Warning] WSREP: Failed to report last committed 47065, -4 (Interrupted system call)
+2015-10-19 18:01:25 1 [Warning] WSREP: Failed to report last committed 50189, -4 (Interrupted system call)
+2015-10-19 18:07:31 1 [Warning] WSREP: Failed to report last committed 51425, -4 (Interrupted system call)
+2015-10-19 18:40:52 1 [Warning] WSREP: Failed to report last committed 58053, -4 (Interrupted system call)
+2015-10-19 18:43:02 1 [Warning] WSREP: Failed to report last committed 58426, -4 (Interrupted system call)
+2015-10-19 18:43:42 1 [Warning] WSREP: Failed to report last committed 58543, -4 (Interrupted system call)
+2015-10-19 18:44:29 1 [Warning] WSREP: Failed to report last committed 58672, -4 (Interrupted system call)
+2015-10-19 18:46:17 1 [Warning] WSREP: Failed to report last committed 59054, -4 (Interrupted system call)
+2015-10-19 18:58:33 1 [Warning] WSREP: Failed to report last committed 61467, -4 (Interrupted system call)
+2015-10-19 19:00:15 1 [Warning] WSREP: Failed to report last committed 61810, -4 (Interrupted system call)
+2015-10-19 19:18:54 1 [Warning] WSREP: Failed to report last committed 65254, -4 (Interrupted system call)
+2015-10-19 20:38:03 1 [Warning] WSREP: Failed to report last committed 80111, -4 (Interrupted system call)
+2015-10-19 20:48:29 1 [Warning] WSREP: Failed to report last committed 82074, -4 (Interrupted system call)
+2015-10-19 21:43:25 1 [Warning] WSREP: Failed to report last committed 91838, -4 (Interrupted system call)
+2015-10-19 21:54:48 1 [Warning] WSREP: Failed to report last committed 94034, -4 (Interrupted system call)
+2015-10-19 23:12:02 1 [Warning] WSREP: Failed to report last committed 108968, -4 (Interrupted system call)
+2015-10-19 23:12:37 1 [Warning] WSREP: Failed to report last committed 109068, -4 (Interrupted system call)
+2015-10-19 23:13:52 1 [Warning] WSREP: Failed to report last committed 109277, -4 (Interrupted system call)
+2015-10-19 23:26:21 1 [Warning] WSREP: Failed to report last committed 111769, -4 (Interrupted system call)
+2015-10-19 23:27:22 1 [Warning] WSREP: Failed to report last committed 111965, -4 (Interrupted system call)
+2015-10-20 00:10:15 1 [Warning] WSREP: Failed to report last committed 119621, -4 (Interrupted system call)
+2015-10-20 00:11:34 1 [Warning] WSREP: Failed to report last committed 119877, -4 (Interrupted system call)
+2015-10-20 00:28:33 1 [Warning] WSREP: Failed to report last committed 123210, -4 (Interrupted system call)
+2015-10-20 00:43:13 1 [Warning] WSREP: Failed to report last committed 126080, -4 (Interrupted system call)
+2015-10-20 01:11:39 1 [Warning] WSREP: Failed to report last committed 131396, -4 (Interrupted system call)
+2015-10-20 01:11:46 1 [Warning] WSREP: Failed to report last committed 131421, -4 (Interrupted system call)
+2015-10-20 01:13:08 1 [Warning] WSREP: Failed to report last committed 131644, -4 (Interrupted system call)
+2015-10-20 01:52:09 1 [Warning] WSREP: Failed to report last committed 138377, -4 (Interrupted system call)
+2015-10-20 01:52:51 1 [Warning] WSREP: Failed to report last committed 138507, -4 (Interrupted system call)
+2015-10-20 03:00:05 1 [Warning] WSREP: Failed to report last committed 151412, -4 (Interrupted system call)
+2015-10-20 03:11:28 1 [Warning] WSREP: Failed to report last committed 153333, -4 (Interrupted system call)
+2015-10-20 03:12:18 1 [Warning] WSREP: Failed to report last committed 153437, -4 (Interrupted system call)
+2015-10-20 03:13:05 1 [Warning] WSREP: Failed to report last committed 153540, -4 (Interrupted system call)
+2015-10-20 03:13:44 1 [Warning] WSREP: Failed to report last committed 153642, -4 (Interrupted system call)
+2015-10-20 03:14:21 1 [Warning] WSREP: Failed to report last committed 153746, -4 (Interrupted system call)
+2015-10-20 03:14:59 1 [Warning] WSREP: Failed to report last committed 153858, -4 (Interrupted system call)
+2015-10-20 03:15:43 1 [Warning] WSREP: Failed to report last committed 153985, -4 (Interrupted system call)
+2015-10-20 03:16:22 1 [Warning] WSREP: Failed to report last committed 154113, -4 (Interrupted system call)
+2015-10-20 03:42:38 1 [Warning] WSREP: Failed to report last committed 158355, -4 (Interrupted system call)
+2015-10-20 03:43:21 1 [Warning] WSREP: Failed to report last committed 158465, -4 (Interrupted system call)
+2015-10-20 03:44:03 1 [Warning] WSREP: Failed to report last committed 158570, -4 (Interrupted system call)
+2015-10-20 03:45:27 1 [Warning] WSREP: Failed to report last committed 158786, -4 (Interrupted system call)
+2015-10-20 03:46:15 1 [Warning] WSREP: Failed to report last committed 158892, -4 (Interrupted system call)
+2015-10-20 03:47:03 1 [Warning] WSREP: Failed to report last committed 159021, -4 (Interrupted system call)
+2015-10-20 03:47:43 1 [Warning] WSREP: Failed to report last committed 159147, -4 (Interrupted system call)
+2015-10-20 03:49:04 1 [Warning] WSREP: Failed to report last committed 159406, -4 (Interrupted system call)
+2015-10-20 03:49:45 1 [Warning] WSREP: Failed to report last committed 159532, -4 (Interrupted system call)
+2015-10-20 03:51:07 1 [Warning] WSREP: Failed to report last committed 159787, -4 (Interrupted system call)
+2015-10-20 03:52:04 1 [Warning] WSREP: Failed to report last committed 159916, -4 (Interrupted system call)
+2015-10-20 03:53:14 1 [Note] WSREP: (dfaa40ed, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: tcp://10.254.157.199:4567 
+2015-10-20 03:53:18 1 [Note] WSREP: (dfaa40ed, 'tcp://0.0.0.0:4567') turning message relay requesting off
