@@ -110,48 +110,48 @@
     <body id="demo">
     <script>
         var requestCxt = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
 
         var redisCxt1 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
         var redisCxt2 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
         var redisCxt3 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
 
         var diskIOCxt1 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
         var diskIOCxt2 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
         var diskIOCxt3 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
 
         var warnCxt1 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
         var warnCxt2 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
         var warnCxt3 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
 
 
         var errorCxt1 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
         var errorCxt2 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
         var errorCxt3 = cubism.context()
-            .size(800)
+            .size(840)
             .stop();
 
 
@@ -245,7 +245,7 @@
             var format = d3.time.format("%d-%b-%y");
                 return requestCxt.metric(function(start, stop, step, callback) {
                         var values = {{ requestData }}
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -255,7 +255,7 @@
             var format = d3.time.format("%d-%b-%y");
                 return redisCxt1.metric(function(start, stop, step, callback) {
                         var values = {{ redisData1 }}
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -263,7 +263,7 @@
             var format = d3.time.format("%d-%b-%y");
                 return redisCxt2.metric(function(start, stop, step, callback) {
                         var values = {{ redisData2 }}
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -271,7 +271,7 @@
             var format = d3.time.format("%d-%b-%y");
                 return redisCxt3.metric(function(start, stop, step, callback) {
                         var values = {{ redisData3 }}
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -281,7 +281,7 @@
                 return diskIOCxt1.metric(function(start, stop, step, callback) {
                         var values = {{ diskIO1 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -290,7 +290,7 @@
                 return diskIOCxt2.metric(function(start, stop, step, callback) {
                         var values = {{ diskIO2 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -299,7 +299,7 @@
                 return diskIOCxt3.metric(function(start, stop, step, callback) {
                         var values = {{ diskIO3 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -310,7 +310,7 @@
                 return warnCxt1.metric(function(start, stop, step, callback) {
                         var values = {{ warn1 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -319,7 +319,7 @@
                 return warnCxt2.metric(function(start, stop, step, callback) {
                         var values = {{ warn2 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -328,7 +328,7 @@
                 return warnCxt3.metric(function(start, stop, step, callback) {
                         var values = {{ warn3 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -339,7 +339,7 @@
                 return errorCxt1.metric(function(start, stop, step, callback) {
                         var values = {{ error1 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -348,7 +348,7 @@
                 return errorCxt2.metric(function(start, stop, step, callback) {
                         var values = {{ error2 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
@@ -357,7 +357,7 @@
                 return errorCxt3.metric(function(start, stop, step, callback) {
                         var values = {{ error3 }}
                         console.log(values)
-                        callback(null, values.slice(0, 800))
+                        callback(null, values.slice(0, 840))
 
                 }, name);
         }
