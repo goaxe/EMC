@@ -191,9 +191,63 @@ def graphs():
     redisDatas = parseRedisData()
     ioDatas = parseDiskIO()
     warnDatas, errorDatas= parseMySQLData()
+    maxNum = 0
+    for tmp in requestData:
+        if tmp > maxNum:
+            maxNum = tmp
+    print('maxRequest: ', maxNum)
+    maxNum = 0
+    for i in range(0, 3):
+        for j in redisDatas[i]:
+            if redisDatas[i][j] != 0 and redisDatas[i][j] != 2 and  predisDatas[i][j] != 4 and predisDatas[i][j] != 6:
+                print('in reids ', redisDatas[i][j])
+    for i in range(0, 3):
+        maxNum = 0
+        for  j in ioDatas[i]:
+            if j > maxNum:
+                maxNum = j
+        print('io', maxNum)
+
+    maxNum = 0
+    for i in warnDatas[0]:
+        if i > maxNum:
+            maxNum = i
+    print('warn1', maxNum)
+
+    for i in warnDatas[1]:
+        if i != 0 and i != 1 and i != 2:
+            print('warn2', i)
+    for i in warnDatas[2]:
+        if i != 0 and i != 1 and i != 2 and i != 4 and i != 27:
+            print('warn3', i)
+    maxNum = 0
+    for  i in errorDatas[0]:
+        if i > maxNum:
+            maxNum = i
+    print('error1', maxNum)
+    for i in errorDatas[1]:
+        if i != 0:
+            print('error2', i)
+    for i in errorDatas[2]:
+        if i != 0:
+            print('error3', i)
+
+
+
+
+    print('requestData\n')
+    print(requestData)
+    print('redisDatas\n')
+    print('ioDatas\n')
+    print(ioDatas)
+    print(redisDatas)
+    print('warnDatas\n')
+    print(warnDatas)
+    print('errorDatas\n')
+    print(errorDatas)
     return render_template('layout.html', requestData=requestData, redisData1=redisDatas[0], redisData2 = redisDatas[1], redisData3 = redisDatas[2], diskIO1=ioDatas[0], diskIO2=ioDatas[1], diskIO3=ioDatas[2], warn1=warnDatas[0], warn2=warnDatas[1], warn3=warnDatas[2], error1=errorDatas[0], error2=errorDatas[1], error3=errorDatas[2])
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=8000)
