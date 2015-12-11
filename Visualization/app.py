@@ -40,7 +40,7 @@ def parseRequestData():
     print('request data len:', len(counts))
 #     for i in range(0, 20):
         # print(counts[i])
-    return counts
+    return counts[10:]
 
 def parseRedisData():
     datas = []
@@ -75,7 +75,7 @@ def parseRedisData():
             data.append(mem)
         f.close()
         print('redis data len:', len(data))
-        datas.append(data)
+        datas.append(data[10:])
     for i in range(0, 3):
         for j in range(0, 200):
             print datas[i][j]
@@ -119,6 +119,7 @@ def parseDiskIO():
     f.close()
     for i in range(0, 3):
         data[i].append(count[i])
+        data[i] = data[i][10:]
 
     print('io in node1:', len(data[0]))
     print('io in node2:', len(data[1]))
@@ -178,11 +179,77 @@ def parseMySQLData():
         f.close()
         warns.append(warnCount)
         errors.append(errorCount)
-        warnData.append(warns)
-        errorData.append(errors)
+        warnData.append(warns[10:])
+        errorData.append(errors[10:])
     for i in range(0, 3):
         print("mysql len:", len(warnData[i]), len(errorData[i]))
     return warnData, errorData
+
+def parseSQLCpu():
+    datas = []
+    files = ['./static/csv/cpu_4q39x.csv', './static/csv/cpu_pub1y.csv', './static/csv/cpu_rgij3.csv']
+    for i in range(0, 3):
+        f = open(files[i])
+        data = []
+
+        for line in f:
+            if line.startswith('time'):
+                continue
+            strs = line.split(',')
+            data.append(float(strs[1]))
+        f.close()
+        print('sql cpu data len:', len(data))
+        datas.append(data)
+    for i in range(0, 3):
+        for j in range(0, 200):
+            print datas[i][j]
+        print '============'
+
+    return datas
+
+def parseSQLRead():
+    datas = []
+    files = ['./static/csv/disk_read_4q39x.csv', './static/csv/disk_read_pub1y.csv', './static/csv/disk_read_rgij3.csv']
+    for i in range(0, 3):
+        f = open(files[i])
+        data = []
+
+        for line in f:
+            if line.startswith('time'):
+                continue
+            strs = line.split(',')
+            data.append(float(strs[1]))
+        f.close()
+        print('sql read data len:', len(data))
+        datas.append(data)
+    for i in range(0, 3):
+        for j in range(0, 200):
+            print datas[i][j]
+        print '============'
+
+    return datas
+
+def parseSQLWrite():
+    datas = []
+    files = ['./static/csv/disk_write_4q39x.csv', './static/csv/disk_write_pub1y.csv', './static/csv/disk_write_rgij3.csv']
+    for i in range(0, 3):
+        f = open(files[i])
+        data = []
+
+        for line in f:
+            if line.startswith('time'):
+                continue
+            strs = line.split(',')
+            data.append(float(strs[1]))
+        f.close()
+        print('sql write data len:', len(data))
+        datas.append(data)
+    for i in range(0, 3):
+        for j in range(0, 200):
+            print datas[i][j]
+        print '============'
+
+    return datas
 
 
 @app.route('/')
@@ -191,6 +258,9 @@ def graphs():
     redisDatas = parseRedisData()
     ioDatas = parseDiskIO()
     warnDatas, errorDatas= parseMySQLData()
+    cpuDatas = parseSQLCpu()
+    readDatas = parseSQLRead()
+    writeDatas = parseSQLWrite()
     maxNum = 0
     for tmp in requestData:
         if tmp > maxNum:
@@ -199,7 +269,7 @@ def graphs():
     maxNum = 0
     for i in range(0, 3):
         for j in redisDatas[i]:
-            if redisDatas[i][j] != 0 and redisDatas[i][j] != 2 and  predisDatas[i][j] != 4 and predisDatas[i][j] != 6:
+            if redisDatas[i][j] != 0 and redisDatas[i][j] != 2 and  redisDatas[i][j] != 4 and redisDatas[i][j] != 6:
                 print('in reids ', redisDatas[i][j])
     for i in range(0, 3):
         maxNum = 0
@@ -245,7 +315,7 @@ def graphs():
     print(warnDatas)
     print('errorDatas\n')
     print(errorDatas)
-    return render_template('layout.html', requestData=requestData, redisData1=redisDatas[0], redisData2 = redisDatas[1], redisData3 = redisDatas[2], diskIO1=ioDatas[0], diskIO2=ioDatas[1], diskIO3=ioDatas[2], warn1=warnDatas[0], warn2=warnDatas[1], warn3=warnDatas[2], error1=errorDatas[0], error2=errorDatas[1], error3=errorDatas[2])
+    return render_template('layout.html', requestData=requestData, redisData1=redisDatas[0], redisData2 = redisDatas[1], redisData3 = redisDatas[2], diskIO1=ioDatas[0], diskIO2=ioDatas[1], diskIO3=ioDatas[2], warn1=warnDatas[0], warn2=warnDatas[1], warn3=warnDatas[2], error1=errorDatas[0], error2=errorDatas[1], error3=errorDatas[2], cpu1 = cpuDatas[0], cpu2 = cpuDatas[1], cpu3 = cpuDatas[2], read1 = readDatas[0], read2 = readDatas[1], read3 = readDatas[2], write1 = writeDatas[0], write2 = writeDatas[1], write3 = writeDatas[2])
 
 
 

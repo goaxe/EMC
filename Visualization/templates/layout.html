@@ -154,7 +154,36 @@
             .size(840)
             .stop();
 
+        var cpuCxt1 = cubism.context()
+            .size(840)
+            .stop();
+        var cpuCxt2 = cubism.context()
+            .size(840)
+            .stop();
+        var cpuCxt3 = cubism.context()
+            .size(840)
+            .stop();
 
+        var readCxt1 = cubism.context()
+            .size(840)
+            .stop();
+        var readCxt2 = cubism.context()
+            .size(840)
+            .stop();
+        var readCxt3 = cubism.context()
+            .size(840)
+            .stop();
+
+
+        var writeCxt1 = cubism.context()
+            .size(840)
+            .stop();
+        var writeCxt2 = cubism.context()
+            .size(840)
+            .stop();
+        var writeCxt3 = cubism.context()
+            .size(840)
+            .stop();
 
 
 
@@ -238,6 +267,64 @@
         .enter().insert("div", ".bottom")
         .attr("class", "horizon")
         .call(errorCxt3.horizon().title('error3')
+        .format(d3.format("+,.2p")));
+
+        d3.select("#cpu1")
+        .data(["cpu1"].map(cpuStock1))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(cpuCxt1.horizon().title('cpu1')
+        .format(d3.format("+,.2p")));
+        d3.select("#cpu2")
+        .data(["cpu2"].map(cpuStock2))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(cpuCxt2.horizon().title('cpu2')
+        .format(d3.format("+,.2p")));
+        d3.select("#cpu3")
+        .data(["cpu3"].map(cpuStock3))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(cpuCxt3.horizon().title('cpu3')
+        .format(d3.format("+,.2p")));
+
+        d3.select("#read1")
+        .data(["read1"].map(readStock1))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(readCxt1.horizon().title('read1')
+        .format(d3.format("+,.2p")));
+        d3.select("#read2")
+        .data(["read2"].map(readStock2))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(readCxt2.horizon().title('read2')
+        .format(d3.format("+,.2p")));
+        d3.select("#read3")
+        .data(["read3"].map(readStock3))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(readCxt3.horizon().title('read3')
+        .format(d3.format("+,.2p")));
+
+
+        d3.select("#write1")
+        .data(["write1"].map(writeStock1))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(writeCxt1.horizon().title('write1')
+        .format(d3.format("+,.2p")));
+        d3.select("#write2")
+        .data(["write2"].map(writeStock2))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(writeCxt2.horizon().title('write2')
+        .format(d3.format("+,.2p")));
+        d3.select("#write3")
+        .data(["write3"].map(writeStock3))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(writeCxt3.horizon().title('write3')
         .format(d3.format("+,.2p")));
 
 
@@ -363,6 +450,91 @@
         }
 
 
+        function cpuStock1() {
+            var format = d3.time.format("%d-%b-%y");
+                return cpuCxt1.metric(function(start, stop, step, callback) {
+                        var values = {{ cpu1 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+        function cpuStock2() {
+            var format = d3.time.format("%d-%b-%y");
+                return cpuCxt2.metric(function(start, stop, step, callback) {
+                        var values = {{ cpu2 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+        function cpuStock3() {
+            var format = d3.time.format("%d-%b-%y");
+                return cpuCxt3.metric(function(start, stop, step, callback) {
+                        var values = {{ cpu3 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+
+        function readStock1() {
+            var format = d3.time.format("%d-%b-%y");
+                return readCxt1.metric(function(start, stop, step, callback) {
+                        var values = {{ read1 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+        function readStock2() {
+            var format = d3.time.format("%d-%b-%y");
+                return readCxt2.metric(function(start, stop, step, callback) {
+                        var values = {{ read2 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+        function readStock3() {
+            var format = d3.time.format("%d-%b-%y");
+                return readCxt3.metric(function(start, stop, step, callback) {
+                        var values = {{ read3 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+
+
+        function writeStock1() {
+            var format = d3.time.format("%d-%b-%y");
+                return writeCxt1.metric(function(start, stop, step, callback) {
+                        var values = {{ write1 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+        function writeStock2() {
+            var format = d3.time.format("%d-%b-%y");
+                return writeCxt2.metric(function(start, stop, step, callback) {
+                        var values = {{ write2 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+        function writeStock3() {
+            var format = d3.time.format("%d-%b-%y");
+                return writeCxt3.metric(function(start, stop, step, callback) {
+                        var values = {{ write3 }}
+                        console.log(values)
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+
 
         </script>
         <div id="request" class="horizon">
@@ -391,26 +563,44 @@
         </div>
         <div id="error3" class="horizon">
         </div>
+        <div id="cpu1" class="horizon">
+        </div>
+        <div id="cpu2" class="horizon">
+        </div>
+        <div id="cpu3" class="horizon">
+        </div>
+        <div id="read1" class="horizon">
+        </div>
+        <div id="read2" class="horizon">
+        </div>
+        <div id="read3" class="horizon">
+        </div>
+        <div id="write1" class="horizon">
+        </div>
+        <div id="write2" class="horizon">
+        </div>
+        <div id="write3" class="horizon">
+        </div>
 
 <!--62.666666666666664153.66666666666669-->
 <div class="bottom axis">
     <svg width="940" height="28">
         <g transform="translate(0,4)">
-            <g transform="translate(70,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">13:30</text></g>
-            <g transform="translate(130,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">14:30</text></g>
-            <g transform="translate(190,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">15:30</text></g>
-            <g transform="translate(250,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">16:30</text></g>
-            <g transform="translate(310,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">17:30</text></g>
-            <g transform="translate(370,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">18:30</text></g>
-            <g transform="translate(430,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">19:30</text></g>
-            <g transform="translate(490,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">20:30</text></g>
-            <g transform="translate(550,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">21:30</text></g>
-            <g transform="translate(610,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">22:30</text></g>
-            <g transform="translate(670,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">23:30</text></g>
-            <g transform="translate(730,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">24:30</text></g>
-            <g transform="translate(790,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">01:30</text></g>
-            <g transform="translate(850,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">02:30</text></g>
-            <g transform="translate(910,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">03:30</text>
+            <g transform="translate(60,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">21:30</text></g>
+            <g transform="translate(120,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">22:30</text></g>
+            <g transform="translate(180,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">23:30</text></g>
+            <g transform="translate(240,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">00:30</text></g>
+            <g transform="translate(300,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">01:30</text></g>
+            <g transform="translate(360,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">02:30</text></g>
+            <g transform="translate(420,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">03:30</text></g>
+            <g transform="translate(480,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">04:30</text></g>
+            <g transform="translate(540,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">05:30</text></g>
+            <g transform="translate(600,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">06:30</text></g>
+            <g transform="translate(660,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">07:30</text></g>
+            <g transform="translate(720,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">08:30</text></g>
+            <g transform="translate(780,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">09:30</text></g>
+            <g transform="translate(840,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">10:30</text></g>
+            <g transform="translate(900,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">11:30</text>
             </g><!--<path class="domain" d="M0,6V0H1280V6"></path><text y="9" x="1042" dy=".71em" text-anchor="middle" style="fill-opacity: 1;">September 06</text></g>
     </svg>
 </div>
