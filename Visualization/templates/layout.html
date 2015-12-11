@@ -109,6 +109,15 @@
 
     <body id="demo">
     <script>
+        var unavailableCxt = cubism.context()
+            .size(840)
+            .stop();
+
+        var useupCxt = cubism.context()
+            .size(840)
+            .stop();
+
+    
         var requestCxt = cubism.context()
             .size(840)
             .stop();
@@ -185,6 +194,17 @@
             .size(840)
             .stop();
 
+        d3.select("#unavailable")
+        .data(["unavailable"].map(unavailableStock))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(unavailableCxt.horizon().title("unavailable").format(d3.format("+,.2p")));
+
+        d3.select("#useup")
+        .data(["useup"].map(useupStock))
+        .enter().insert("div", ".bottom")
+        .attr("class", "horizon")
+        .call(useupCxt.horizon().title("useup").format(d3.format("+,.2p")));
 
 
         d3.select("#request")
@@ -326,6 +346,41 @@
         .attr("class", "horizon")
         .call(writeCxt3.horizon().title('write3')
         .format(d3.format("+,.2p")));
+
+/*        unavailableCxt.on("focus", function(i) {
+                d3.selectAll(".value").style("right", i == null ? null : unavailableCxt.size() - i  + 400 + "px");
+        });
+
+        useupCxt.on("focus", function(i) {
+                d3.selectAll(".value").style("right", i == null ? null : useupCxt.size() - i  + 400 + "px");
+        });
+
+        */
+
+        requestCxt.on("focus", function(i) {
+                d3.selectAll(".value").style("right", i == null ? null : requestCxt.size() - i  + 400 + "px");
+        });
+
+        function unavailableStock() {
+            var format = d3.time.format("%d-%b-%y");
+                return unavailableCxt.metric(function(start, stop, step, callback) {
+                        var values = {{ unavailable }}
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+
+
+        function useupStock() {
+            var format = d3.time.format("%d-%b-%y");
+                return useupCxt.metric(function(start, stop, step, callback) {
+                       var values = {{ useup }}
+                        callback(null, values.slice(0, 840))
+
+                }, name);
+        }
+
+
 
 
         function requestStock() {
@@ -537,6 +592,10 @@
 
 
         </script>
+        <div id="unavailable" class="horizon">
+        </div>
+        <div id="useup" class="horizon">
+        </div>
         <div id="request" class="horizon">
         </div>
         <div id="redis1" class="horizon">
