@@ -5,6 +5,39 @@ import os
 
 app = Flask(__name__)
 
+def genDiskUnavailable():
+    data = []
+    for i in range(1, 16):
+        for j in range(30, 60):
+            if j > 35 and j <= 40:
+                data.append(1)
+            else:
+                data.append(0)
+        for j in range(0, 30):
+            if j > 5 and j <= 10:
+                data.append(1)
+            else:
+                data.append(0)
+
+    return data
+
+def genDiskUseup():
+    data = []
+    for i in range(1, 16):
+        for j in range(30, 60):
+            if j > 45 and j <= 50:
+                data.append(1)
+            else:
+                data.append(0)
+        for j in range(0, 30):
+            if j > 8 and j <= 13:
+                data.append(1)
+            else:
+                data.append(0)
+
+    return data
+
+
 def parseRequestData():
     f = open('static/csv/requester.sh.csv')
     counts = []
@@ -37,10 +70,10 @@ def parseRequestData():
             count = 1
     f.close()
     counts.append(count)
-    print('request data len:', len(counts))
+    # print('request data len:', len(counts))
 #     for i in range(0, 20):
         # print(counts[i])
-    return counts
+    return counts[10:]
 
 def parseRedisData():
     datas = []
@@ -74,12 +107,12 @@ def parseRedisData():
                 data.append(0)
             data.append(mem)
         f.close()
-        print('redis data len:', len(data))
-        datas.append(data)
-    for i in range(0, 3):
-        for j in range(0, 200):
-            print datas[i][j]
-        print '============'
+        # print('redis data len:', len(data))
+        datas.append(data[10:])
+#     for i in range(0, 3):
+        # for j in range(0, 200):
+            # # print datas[i][j]
+        # print '============'
 
     return datas
 
@@ -119,10 +152,11 @@ def parseDiskIO():
     f.close()
     for i in range(0, 3):
         data[i].append(count[i])
+        data[i] = data[i][10:]
 
-    print('io in node1:', len(data[0]))
-    print('io in node2:', len(data[1]))
-    print('io in node3:', len(data[2]))
+#     print('io in node1:', len(data[0]))
+    # print('io in node2:', len(data[1]))
+    # print('io in node3:', len(data[2]))
     return data
 #     for i in range(0, 3):
         # for j in range(0, 20):
@@ -178,74 +212,148 @@ def parseMySQLData():
         f.close()
         warns.append(warnCount)
         errors.append(errorCount)
-        warnData.append(warns)
-        errorData.append(errors)
-    for i in range(0, 3):
-        print("mysql len:", len(warnData[i]), len(errorData[i]))
+        warnData.append(warns[10:])
+        errorData.append(errors[10:])
+#     for i in range(0, 3):
+        # print("mysql len:", len(warnData[i]), len(errorData[i]))
     return warnData, errorData
+
+def parseSQLCpu():
+    datas = []
+    files = ['./static/csv/cpu1.csv', './static/csv/cpu2.csv', './static/csv/cpu3.csv']
+    for i in range(0, 3):
+        f = open(files[i])
+        data = []
+
+        for line in f:
+            if line.startswith('time'):
+                continue
+            strs = line.split(',')
+            data.append(float(strs[1]))
+        f.close()
+        # print('sql cpu data len:', len(data))
+        datas.append(data)
+#     for i in range(0, 3):
+        # for j in range(0, 200):
+            # print datas[i][j]
+        # print '============'
+
+    return datas
+
+def parseSQLRead():
+    datas = []
+    files = ['./static/csv/disk_read1.csv', './static/csv/disk_read2.csv', './static/csv/disk_read3.csv']
+    for i in range(0, 3):
+        f = open(files[i])
+        data = []
+
+        for line in f:
+            if line.startswith('time'):
+                continue
+            strs = line.split(',')
+            data.append(float(strs[1]))
+        f.close()
+        # print('sql read data len:', len(data))
+        datas.append(data)
+#     for i in range(0, 3):
+        # for j in range(0, 200):
+            # print datas[i][j]
+        # print '============'
+
+    return datas
+
+def parseSQLWrite():
+    datas = []
+    files = ['./static/csv/disk_write1.csv', './static/csv/disk_write2.csv', './static/csv/disk_write3.csv']
+    for i in range(0, 3):
+        f = open(files[i])
+        data = []
+
+        for line in f:
+            if line.startswith('time'):
+                continue
+            strs = line.split(',')
+            data.append(float(strs[1]))
+        f.close()
+        # print('sql write data len:', len(data))
+        datas.append(data)
+#     for i in range(0, 3):
+        # for j in range(0, 200):
+            # print datas[i][j]
+        # print '============'
+
+    return datas
 
 
 @app.route('/')
 def graphs():
+    unavailable = genDiskUnavailable()
+    useup = genDiskUseup()
+#     print useup
+    # print unavailable
     requestData = parseRequestData()
     redisDatas = parseRedisData()
     ioDatas = parseDiskIO()
     warnDatas, errorDatas= parseMySQLData()
-    maxNum = 0
-    for tmp in requestData:
-        if tmp > maxNum:
-            maxNum = tmp
-    print('maxRequest: ', maxNum)
-    maxNum = 0
-    for i in range(0, 3):
-        for j in redisDatas[i]:
-            if redisDatas[i][j] != 0 and redisDatas[i][j] != 2 and  predisDatas[i][j] != 4 and predisDatas[i][j] != 6:
-                print('in reids ', redisDatas[i][j])
-    for i in range(0, 3):
-        maxNum = 0
-        for  j in ioDatas[i]:
-            if j > maxNum:
-                maxNum = j
-        print('io', maxNum)
+    cpuDatas = parseSQLCpu()
+    readDatas = parseSQLRead()
+    writeDatas = parseSQLWrite()
+    # maxNum = 0
+    # for tmp in requestData:
+        # if tmp > maxNum:
+            # maxNum = tmp
+    # print('maxRequest: ', maxNum)
+    # maxNum = 0
+    # for i in range(0, 3):
+        # for j in redisDatas[i]:
+            # if redisDatas[i][j] != 0 and redisDatas[i][j] != 2 and  redisDatas[i][j] != 4 and redisDatas[i][j] != 6:
+                # print('in reids ', redisDatas[i][j])
+    # for i in range(0, 3):
+        # maxNum = 0
+        # for  j in ioDatas[i]:
+            # if j > maxNum:
+                # maxNum = j
+        # print('io', maxNum)
 
-    maxNum = 0
-    for i in warnDatas[0]:
-        if i > maxNum:
-            maxNum = i
-    print('warn1', maxNum)
+    # maxNum = 0
+    # for i in warnDatas[0]:
+        # if i > maxNum:
+            # maxNum = i
+    # print('warn1', maxNum)
 
-    for i in warnDatas[1]:
-        if i != 0 and i != 1 and i != 2:
-            print('warn2', i)
-    for i in warnDatas[2]:
-        if i != 0 and i != 1 and i != 2 and i != 4 and i != 27:
-            print('warn3', i)
-    maxNum = 0
-    for  i in errorDatas[0]:
-        if i > maxNum:
-            maxNum = i
-    print('error1', maxNum)
-    for i in errorDatas[1]:
-        if i != 0:
-            print('error2', i)
-    for i in errorDatas[2]:
-        if i != 0:
-            print('error3', i)
-
-
+    # for i in warnDatas[1]:
+        # if i != 0 and i != 1 and i != 2:
+            # print('warn2', i)
+    # for i in warnDatas[2]:
+        # if i != 0 and i != 1 and i != 2 and i != 4 and i != 27:
+            # print('warn3', i)
+    # maxNum = 0
+    # for  i in errorDatas[0]:
+        # if i > maxNum:
+            # maxNum = i
+    # print('error1', maxNum)
+    # for i in errorDatas[1]:
+        # if i != 0:
+            # print('error2', i)
+    # for i in errorDatas[2]:
+        # if i != 0:
+            # print('error3', i)
 
 
-    print('requestData\n')
-    print(requestData)
-    print('redisDatas\n')
-    print('ioDatas\n')
-    print(ioDatas)
-    print(redisDatas)
-    print('warnDatas\n')
-    print(warnDatas)
-    print('errorDatas\n')
-    print(errorDatas)
-    return render_template('layout.html', requestData=requestData, redisData1=redisDatas[0], redisData2 = redisDatas[1], redisData3 = redisDatas[2], diskIO1=ioDatas[0], diskIO2=ioDatas[1], diskIO3=ioDatas[2], warn1=warnDatas[0], warn2=warnDatas[1], warn3=warnDatas[2], error1=errorDatas[0], error2=errorDatas[1], error3=errorDatas[2])
+
+
+    # print('requestData\n')
+    # print(requestData)
+    # print('redisDatas\n')
+    # print('ioDatas\n')
+    # print(ioDatas)
+    # print(redisDatas)
+    # print('warnDatas\n')
+    # print(warnDatas)
+    # print('errorDatas\n')
+    # print(errorDatas)
+    print useup
+    return render_template('layout.html', unavailable = unavailable, useup = useup, requestData=requestData, redisData1=redisDatas[0], redisData2 = redisDatas[1], redisData3 = redisDatas[2], diskIO1=ioDatas[0], diskIO2=ioDatas[1], diskIO3=ioDatas[2], warn1=warnDatas[0], warn2=warnDatas[1], warn3=warnDatas[2], error1=errorDatas[0], error2=errorDatas[1], error3=errorDatas[2], cpu1 = cpuDatas[0], cpu2 = cpuDatas[1], cpu3 = cpuDatas[2], read1 = readDatas[0], read2 = readDatas[1], read3 = readDatas[2], write1 = writeDatas[0], write2 = writeDatas[1], write3 = writeDatas[2])
 
 
 

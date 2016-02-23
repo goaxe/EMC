@@ -1,0 +1,45 @@
+select derivative(value/100000) from "cpu/usage_ns_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node1' group by time(60s) order asc
+select derivative(value/100000) from "cpu/usage_ns_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node2' group by time(60s) order asc
+select derivative(value/100000) from "cpu/usage_ns_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node3' group by time(60s) order asc
+
+select mean(value/1024/1024) from "memory/usage_bytes_gauge" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node1' group by time(60s) order asc
+select mean(value/1024/1024) from "memory/usage_bytes_gauge" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node2' group by time(60s) order asc
+select mean(value/1024/1024) from "memory/usage_bytes_gauge" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node3' group by time(60s) order asc
+
+
+select derivative(value/1024) from "disk/read_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node1' and major = '7' and minor = '10' group by time(60s) order asc
+select derivative(value/1024) from "disk/write_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node1' and major = '7' and minor = '10' group by time(60s) order asc
+
+select derivative(value/1024) from "disk/read_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node2' and major = '7' and minor = '10' group by time(60s) order asc
+select derivative(value/1024) from "disk/write_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node2' and major = '7' and minor = '10' group by time(60s) order asc
+
+select derivative(value/1024) from "disk/read_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node3' and major = '7' and minor = '10' group by time(60s) order asc
+select derivative(value/1024) from "disk/write_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and container_name = 'pxc-node3' and major = '7' and minor = '10' group by time(60s) order asc
+
+select derivative(value/100000) from "cpu/usage_ns_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-4q39x' group by time(60s) order asc
+select mean(value/1024/1024) from "memory/usage_bytes_gauge" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-4q39x' group by time(60s) order asc
+select derivative(value/1024) from "disk/write_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-4q39x' and major = '253' and minor='15' group by time(60s) order asc
+select derivative(value/1024) from "disk/read_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-4q39x' and major = '253' and minor='15' group by time(60s) order asc
+
+select derivative(value/100000) from "cpu/usage_ns_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-pub1y' group by time(60s) order asc
+select mean(value/1024/1024) from "memory/usage_bytes_gauge" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-4q39x' group by time(60s) order asc
+select derivative(value/1024) from "disk/write_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-pub1y' and major = '253' and minor='14' group by time(60s) order asc
+select derivative(value/1024) from "disk/read_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-pub1y' and major = '253' and minor='14' group by time(60s) order asc
+
+select derivative(value/100000) from "cpu/usage_ns_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-rgij3' group by time(60s) order asc
+select mean(value/1024/1024) from "memory/usage_bytes_gauge" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-rgij3' group by time(60s) order asc
+select derivative(value/1024) from "disk/write_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-rgij3' and major = '253' and minor='13' group by time(60s) order asc
+select derivative(value/1024) from "disk/read_bytes_cumulative" where time > '2015-10-19 13:30:00' and time < '2015-10-20 04:30:00' and pod_name='pressurer-rgij3' and major = '253' and minor='13' group by time(60s) order asc
+
+
+
+
+
+
+
+
+
+
+
+
+
