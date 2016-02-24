@@ -55,6 +55,7 @@
 
 #include <sys/kmem.h>
 #include <sys/kmem_cache.h>
+
 //#include <sys/zmod.h>
 //#include <linux/zlib_compat.h>
 
@@ -176,10 +177,10 @@ z_compress_level(void *dest, size_t *destLen, const void *source,
 	z_stream stream;
 	int err;
 
-	stream.next_in = (Byte *)source;
-	stream.avail_in = (uInt)sourceLen;
-	stream.next_out = dest;
-	stream.avail_out = (uInt)*destLen;
+	stream.next_in = (dma_addr_t)source;
+	stream.avail_in = (unsigned long)sourceLen;
+	stream.next_out = (dma_addr_t)dest;
+	stream.avail_out = (unsigned long)*destLen;
 
 	if ((size_t)stream.avail_out != *destLen)
 		return Z_BUF_ERROR;
@@ -194,7 +195,7 @@ z_compress_level(void *dest, size_t *destLen, const void *source,
 		return err;
 	}
 
-	err = deflate(&stream, Z_FINISH);
+	err = dce_deflate(&stream, Z_FINISH);
 	if (err != Z_STREAM_END) {
 		deflateEnd(&stream);
 		zlib_workspace_free(stream.workspace);
@@ -202,7 +203,7 @@ z_compress_level(void *dest, size_t *destLen, const void *source,
 	}
 	*destLen = stream.total_out;
 
-	err = deflateEnd(&stream);
+	deflateEnd(&stream);
 	zlib_workspace_free(stream.workspace);
 
 	return err;
@@ -230,10 +231,10 @@ z_uncompress(void *dest, size_t *destLen, const void *source, size_t sourceLen)
 	z_stream stream;
 	int err;
 
-	stream.next_in = (Byte *)source;
-	stream.avail_in = (uInt)sourceLen;
-	stream.next_out = dest;
-	stream.avail_out = (uInt)*destLen;
+	stream.next_in = (dma_addr_t)source;
+	stream.avail_in = (unsigned long)sourceLen;
+	stream.next_out = (dma_addr_t)dest;
+	stream.avail_out = (unsigned long)*destLen;
 
 	if ((size_t)stream.avail_out != *destLen)
 		return Z_BUF_ERROR;
@@ -248,7 +249,7 @@ z_uncompress(void *dest, size_t *destLen, const void *source, size_t sourceLen)
 		return err;
 	}
 
-	err = inflate(&stream, Z_FINISH);
+	err = dce_inflate(&stream, Z_FINISH);
 	if (err != Z_STREAM_END) {
 		inflateEnd(&stream);
 		zlib_workspace_free(stream.workspace);
@@ -261,14 +262,14 @@ z_uncompress(void *dest, size_t *destLen, const void *source, size_t sourceLen)
 	}
 	*destLen = stream.total_out;
 
-	err = inflateEnd(&stream);
+	inflateEnd(&stream);
 	zlib_workspace_free(stream.workspace);
 
 	return err;
 }
 EXPORT_SYMBOL(z_uncompress);
 
-int
+/*int
 spl_zlib_init(void)
 {
 	int size;
@@ -291,3 +292,4 @@ spl_zlib_fini(void)
 	kmem_cache_destroy(zlib_workspace_cache);
         zlib_workspace_cache = NULL;
 }
+*/
