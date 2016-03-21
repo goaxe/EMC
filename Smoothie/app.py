@@ -16,21 +16,29 @@ def create_data():
     ports = ['80', '25', '443', '53', '22', '21', '67', '110', '143', '137', '138', '139', '1024-', '1024+']
     for i in range(0, 10):
         for port in ports:
-            redis_store.rpush('k' + port, random.uniform(10, 20))
+            nums = [str(random.uniform(10, 20)), str(random.uniform(10, 30))]
+            print nums
+            redis_store.rpush('k' + port, ','.join(nums))
     return "create data success"
 
 
 @app.route('/data')
 def data():
     ports = ['80', '25', '443', '53', '22', '21', '67', '110', '143', '137', '138', '139', '1024-', '1024+']
-    data = []
+    size = []
+    count = []
     for port in ports:
         tmp = redis_store.lpop('k' + port)
         if tmp is None:
-            tmp = 0
-        data.append(tmp)
+            size.append(0)
+            count.append(0)
+        else:
+            tmp = tmp.split(',')
+            size.append(tmp[0])
+            count.append(tmp[1])
     da = {}
-    da['data'] = data
+    da['size'] = size
+    da['count'] = count
     return jsonify(**da)
 
 if __name__ == '__main__':

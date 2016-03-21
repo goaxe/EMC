@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <style type="text/css">
+      body {
+        background-color: #111111;
+        color: #eeeeee;
+        font-family: tahoma, arial, sans-serif;
+        padding-left: 100px;
+      }
+      h4 {
+        margin-bottom: 1px;
+      }
+    </style>
 <script type="text/javascript" src="./static/js/smoothie.js"></script>
 <script type="text/javascript">
+var seriesOptions = [
+  { strokeStyle: 'rgba(255, 0, 0, 1)', fillStyle: 'rgba(255, 0, 0, 0.1)', lineWidth: 3 },
+  { strokeStyle: 'rgba(0, 255, 0, 1)', fillStyle: 'rgba(0, 255, 0, 0.1)', lineWidth: 3 },
+  { strokeStyle: 'rgba(0, 0, 255, 1)', fillStyle: 'rgba(0, 0, 255, 0.1)', lineWidth: 3 },
+  { strokeStyle: 'rgba(255, 255, 0, 1)', fillStyle: 'rgba(255, 255, 0, 0.1)', lineWidth: 3 }
+];
 
 // Randomly add a data point every 500ms
 setInterval(appendData, 2000);
 var xmlHttp = new XMLHttpRequest();  
 var portSize = 14;
-var randoms = new Array(new TimeSeries(), new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries(),new TimeSeries());
-
+var randoms = new Array();
+for (var i = 0; i < portSize; i ++) {
+    randoms.push([new TimeSeries(), new TimeSeries()]);
+}
 function appendData() {
     var url = 'http://127.0.0.1:8000/data'//{{ url_for('data') }}
     xmlHttp.open("GET", url, true);
@@ -25,37 +44,68 @@ function appendDataCbk() {
     var now = new Date().getTime()
     
     for (var i = 0; i < portSize; i ++) {
-        randoms[i].append(now, response["data"][i])
+        randoms[i][0].append(now, response["size"][i])
+        randoms[i][1].append(now, response["count"][i])
     }
 }
 
 
 function createTimeline() {
     var chart = new SmoothieChart();
-    var charts = new Array(new SmoothieChart(), new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart(),new SmoothieChart());
+    var charts = new Array();
     for (var i = 0; i < portSize; i ++) {
-    charts[i].addTimeSeries(randoms[i], { strokeStyle: 'rgba(0, 255, 0, 1)', fillStyle: 'rgba(0, 255, 0, 0.2)', lineWidth: 4 });
-    charts[i].streamTo(document.getElementById("chart" + i), 2000);
+        charts.push(new SmoothieChart({ millisPerPixel: 20, grid: { strokeStyle: '#555555', lineWidth: 1, millisPerLine: 1000, verticalSections: 4 }}));
+    }
+    for (var i = 0; i < portSize; i ++) {
+        charts[i].addTimeSeries(randoms[i][0], seriesOptions[0]);
+        charts[i].addTimeSeries(randoms[i][1], seriesOptions[1]);
+        charts[i].streamTo(document.getElementById("chart" + i), 2000);
     }
     
 }
 </script>
 </head>
 <body onload="createTimeline()">
-<!--{{user}}-->
-<canvas id="chart0" style="1000" height="60"></canvas>
+<h4>port = 80</h4>
+<canvas id="chart0" width="1000" height="80"></canvas>
+
+<h4>port = 25</h4>
 <canvas id="chart1" width="1000" height="80"></canvas>
-<canvas id="chart2" width="1000" height="100"></canvas>
-<canvas id="chart3" width="1000" height="100"></canvas>
-<canvas id="chart4" width="1000" height="100"></canvas>
-<canvas id="chart5" width="1000" height="100"></canvas>
-<canvas id="chart6" width="1000" height="100"></canvas>
-<canvas id="chart7" width="1000" height="100"></canvas>
-<canvas id="chart8" width="1000" height="100"></canvas>
-<canvas id="chart9" width="1000" height="100"></canvas>
-<canvas id="chart10" width="1000" height="100"></canvas>
-<canvas id="chart11" width="1000" height="100"></canvas>
-<canvas id="chart12" width="1000" height="100"></canvas>
-<canvas id="chart13" width="1000" height="100"></canvas>
+
+<h4>port = 443</h4>
+<canvas id="chart2" width="1000" height="80"></canvas>
+
+<h4>port = 53</h4>
+<canvas id="chart3" width="1000" height="80"></canvas>
+
+<h4>port = 22</h4>
+<canvas id="chart4" width="1000" height="80"></canvas>
+
+<h4>port = 21</h4>
+<canvas id="chart5" width="1000" height="80"></canvas>
+
+<h4>port = 67</h4>
+<canvas id="chart6" width="1000" height="80"></canvas>
+
+<h4>port = 110</h4>
+<canvas id="chart7" width="1000" height="80"></canvas>
+
+<h4>port = 143</h4>
+<canvas id="chart8" width="1000" height="80"></canvas>
+
+<h4>port = 137</h4>
+<canvas id="chart9" width="1000" height="80"></canvas>
+
+<h4>port = 138</h4>
+<canvas id="chart10" width="1000" height="80"></canvas>
+
+<h4>port = 139</h4>
+<canvas id="chart11" width="1000" height="80"></canvas>
+
+<h4>port = 1024-</h4>
+<canvas id="chart12" width="1000" height="80"></canvas>
+
+<h4>port = 1024+</h4>
+<canvas id="chart13" width="1000" height="80"></canvas>
 </body>
 </html>
